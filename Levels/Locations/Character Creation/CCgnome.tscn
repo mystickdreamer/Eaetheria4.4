@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://dylpeqccjjvdy"]
+
+[ext_resource type="Script" uid="uid://cay85o2fr7wud" path="res://Levels/Locations/Character Creation/chooseRace.gd" id="1_c8a3d"]
+[ext_resource type="PackedScene" uid="uid://ta8jc8vq5jpk" path="res://Entities/Interactions/Interactions Area/interaction_area.tscn" id="2_ph4tc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tmpvi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tkv1q"]
+
+[node name="Gnome" type="AnimatedSprite2D" groups=["Gnome"]]
+z_index = -1
+position = Vector2(-204, 95)
+sprite_frames = SubResource("SpriteFrames_tmpvi")
+script = ExtResource("1_c8a3d")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_ph4tc")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_tkv1q")

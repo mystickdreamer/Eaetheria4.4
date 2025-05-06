@@ -1,0 +1,86 @@
+[gd_scene load_steps=14 format=3 uid="uid://dpq0eymmdrgaw"]
+
+[ext_resource type="Texture2D" uid="uid://j7pcyj0lwais" path="res://Assets/Characters/Fairy/Fairy 1.png" id="1_186g6"]
+[ext_resource type="Script" uid="uid://cay85o2fr7wud" path="res://Levels/Locations/Character Creation/chooseRace.gd" id="2_nlltq"]
+[ext_resource type="PackedScene" uid="uid://ta8jc8vq5jpk" path="res://Entities/Interactions/Interactions Area/interaction_area.tscn" id="2_v24gw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56gkq"]
+atlas = ExtResource("1_186g6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxld8"]
+atlas = ExtResource("1_186g6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4leer"]
+atlas = ExtResource("1_186g6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7ae8"]
+atlas = ExtResource("1_186g6")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1on15"]
+atlas = ExtResource("1_186g6")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0kag"]
+atlas = ExtResource("1_186g6")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1pkn"]
+atlas = ExtResource("1_186g6")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lblq"]
+atlas = ExtResource("1_186g6")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vy37i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56gkq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxld8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4leer")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7ae8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1on15")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0kag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1pkn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lblq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b8chu"]
+radius = 13.0
+height = 52.0
+
+[node name="Pixie" type="AnimatedSprite2D"]
+z_index = -1
+position = Vector2(37, -98)
+sprite_frames = SubResource("SpriteFrames_vy37i")
+autoplay = "default"
+script = ExtResource("2_nlltq")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_v24gw")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-1, 7)
+shape = SubResource("CapsuleShape2D_b8chu")

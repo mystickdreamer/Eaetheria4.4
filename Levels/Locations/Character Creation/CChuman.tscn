@@ -1,0 +1,56 @@
+[gd_scene load_steps=10 format=3 uid="uid://dvbn2fngtkokj"]
+
+[ext_resource type="Texture2D" uid="uid://b4rlcx86k882g" path="res://Assets/Character_Idle.png" id="1_3crh2"]
+[ext_resource type="PackedScene" uid="uid://ta8jc8vq5jpk" path="res://Entities/Interactions/Interactions Area/interaction_area.tscn" id="2_75m0h"]
+[ext_resource type="Script" uid="uid://cay85o2fr7wud" path="res://Levels/Locations/Character Creation/chooseRace.gd" id="2_bia2l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6d5qt"]
+atlas = ExtResource("1_3crh2")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wq5wg"]
+atlas = ExtResource("1_3crh2")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwjfg"]
+atlas = ExtResource("1_3crh2")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dya0r"]
+atlas = ExtResource("1_3crh2")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v1k6e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6d5qt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wq5wg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwjfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dya0r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d4p2a"]
+radius = 20.0
+
+[node name="Human" type="AnimatedSprite2D"]
+position = Vector2(-107, -104)
+sprite_frames = SubResource("SpriteFrames_v1k6e")
+autoplay = "default"
+script = ExtResource("2_bia2l")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_75m0h")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-1, 6)
+shape = SubResource("CircleShape2D_d4p2a")

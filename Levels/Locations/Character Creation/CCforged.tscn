@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddiwesyxi2ial"]
+
+[ext_resource type="Script" uid="uid://cay85o2fr7wud" path="res://Levels/Locations/Character Creation/chooseRace.gd" id="1_ovw6v"]
+[ext_resource type="PackedScene" uid="uid://ta8jc8vq5jpk" path="res://Entities/Interactions/Interactions Area/interaction_area.tscn" id="2_i14w7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t6uie"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_khdns"]
+
+[node name="Forged" type="AnimatedSprite2D" groups=["Forged"]]
+z_index = -1
+position = Vector2(70, -117)
+sprite_frames = SubResource("SpriteFrames_t6uie")
+script = ExtResource("1_ovw6v")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_i14w7")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_khdns")

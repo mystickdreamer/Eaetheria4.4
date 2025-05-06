@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://3fw8vclml7k"]
+
+[ext_resource type="Script" uid="uid://cay85o2fr7wud" path="res://Levels/Locations/Character Creation/chooseRace.gd" id="1_7unqf"]
+[ext_resource type="PackedScene" uid="uid://ta8jc8vq5jpk" path="res://Entities/Interactions/Interactions Area/interaction_area.tscn" id="2_m3mus"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_heosn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_quor3"]
+
+[node name="Felarion" type="AnimatedSprite2D" groups=["Felarion"]]
+z_index = -1
+position = Vector2(17, -138)
+sprite_frames = SubResource("SpriteFrames_heosn")
+script = ExtResource("1_7unqf")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_m3mus")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_quor3")

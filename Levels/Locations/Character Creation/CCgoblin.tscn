@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1yn8ybe1q1fk"]
+
+[ext_resource type="Script" uid="uid://cay85o2fr7wud" path="res://Levels/Locations/Character Creation/chooseRace.gd" id="1_5atr4"]
+[ext_resource type="PackedScene" uid="uid://ta8jc8vq5jpk" path="res://Entities/Interactions/Interactions Area/interaction_area.tscn" id="2_lij7g"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5fx42"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sii45"]
+
+[node name="Goblin" type="AnimatedSprite2D" groups=["Goblin"]]
+z_index = -1
+position = Vector2(-146, 120)
+sprite_frames = SubResource("SpriteFrames_5fx42")
+script = ExtResource("1_5atr4")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_lij7g")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_sii45")

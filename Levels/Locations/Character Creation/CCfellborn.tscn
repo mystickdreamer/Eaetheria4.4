@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://nvuatkhvqknc"]
+
+[ext_resource type="Script" uid="uid://cay85o2fr7wud" path="res://Levels/Locations/Character Creation/chooseRace.gd" id="1_t7xt2"]
+[ext_resource type="PackedScene" uid="uid://ta8jc8vq5jpk" path="res://Entities/Interactions/Interactions Area/interaction_area.tscn" id="2_8ypla"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i8vgs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0q2jk"]
+
+[node name="Fellborn" type="AnimatedSprite2D" groups=["Fellborn"]]
+z_index = -1
+position = Vector2(34, 79)
+sprite_frames = SubResource("SpriteFrames_i8vgs")
+script = ExtResource("1_t7xt2")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_8ypla")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_0q2jk")

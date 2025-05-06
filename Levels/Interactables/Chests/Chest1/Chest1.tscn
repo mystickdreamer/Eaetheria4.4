@@ -1,0 +1,149 @@
+[gd_scene load_steps=15 format=3 uid="uid://brbtkru8ytaff"]
+
+[ext_resource type="Script" uid="uid://ta4pd6sdvbxo" path="res://Levels/Interactables/Chests/Chest1/containerScript.gd" id="1_mafae"]
+[ext_resource type="Texture2D" uid="uid://d3gj2mkb2hyjg" path="res://Levels/Interactables/Chests/Chest1/treasure-chest.png" id="1_mu41x"]
+[ext_resource type="PackedScene" uid="uid://ta8jc8vq5jpk" path="res://Entities/Interactions/Interactions Area/interaction_area.tscn" id="3_d6dsw"]
+[ext_resource type="PackedScene" uid="uid://ds7ik6vmti5nc" path="res://Entities/Interactions/container_ui.tscn" id="5_pud8x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slc8b"]
+atlas = ExtResource("1_mu41x")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ux28q"]
+atlas = ExtResource("1_mu41x")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8najb"]
+atlas = ExtResource("1_mu41x")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yp1fw"]
+atlas = ExtResource("1_mu41x")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_436jc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slc8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ux28q")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8najb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yp1fw")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfoi8"]
+size = Vector2(30, 20)
+
+[sub_resource type="Animation" id="Animation_x81lb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"open"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_rd2dm"]
+resource_name = "openChest"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"open"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q6uob"]
+_data = {
+&"RESET": SubResource("Animation_x81lb"),
+&"openChest": SubResource("Animation_rd2dm")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xye12"]
+size = Vector2(29, 14)
+
+[node name="Chest1" type="Node2D"]
+script = ExtResource("1_mafae")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_436jc")
+animation = &"open"
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_d6dsw")]
+action_name = "open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_tfoi8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_q6uob")
+}
+
+[node name="ContainerUI" parent="." instance=ExtResource("5_pud8x")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.5, 3)
+shape = SubResource("RectangleShape2D_xye12")

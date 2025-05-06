@@ -1,0 +1,117 @@
+[gd_scene load_steps=12 format=3 uid="uid://dmt8ruw32ibpg"]
+
+[ext_resource type="Script" uid="uid://ta4pd6sdvbxo" path="res://Levels/Interactables/Chests/Chest1/containerScript.gd" id="1_grqsg"]
+[ext_resource type="Texture2D" uid="uid://bld8am4wyuo5f" path="res://Assets/TileMapLayers/Internal/atlas_32x.png" id="2_c2ne8"]
+[ext_resource type="PackedScene" uid="uid://ta8jc8vq5jpk" path="res://Entities/Interactions/Interactions Area/interaction_area.tscn" id="3_l760j"]
+[ext_resource type="PackedScene" uid="uid://ds7ik6vmti5nc" path="res://Entities/Interactions/container_ui.tscn" id="4_d2uo3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42i07"]
+size = Vector2(28, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7ur8"]
+atlas = ExtResource("2_c2ne8")
+region = Rect2(704, 416, 64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfoi8"]
+size = Vector2(37, 29)
+
+[sub_resource type="Animation" id="Animation_x81lb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"open"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_rd2dm"]
+resource_name = "openChest"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"open"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q6uob"]
+_data = {
+&"RESET": SubResource("Animation_x81lb"),
+&"openChest": SubResource("Animation_rd2dm")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8235c"]
+size = Vector2(52, 26)
+
+[node name="Furniture" type="Node2D" groups=["Interactable", "NonAnimated", "external_inventory"]]
+script = ExtResource("1_grqsg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+animation = &""
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_42i07")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_g7ur8")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_l760j")]
+action_name = "open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-1, 13)
+shape = SubResource("RectangleShape2D_tfoi8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_q6uob")
+}
+
+[node name="ContainerUI" parent="." instance=ExtResource("4_d2uo3")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, 3)
+shape = SubResource("RectangleShape2D_8235c")

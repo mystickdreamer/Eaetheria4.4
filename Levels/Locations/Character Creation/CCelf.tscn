@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://bspndxcr483xk"]
+
+[ext_resource type="PackedScene" uid="uid://ta8jc8vq5jpk" path="res://Entities/Interactions/Interactions Area/interaction_area.tscn" id="1_ekein"]
+[ext_resource type="Texture2D" uid="uid://uhlcjteyccjj" path="res://Assets/Characters/free_character_1-3.png" id="1_kwk27"]
+[ext_resource type="Script" uid="uid://cay85o2fr7wud" path="res://Levels/Locations/Character Creation/chooseRace.gd" id="2_jvt03"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8oqd"]
+atlas = ExtResource("1_kwk27")
+region = Rect2(64, 0, 16, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dhuea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8oqd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qw8tj"]
+
+[node name="Elf" type="AnimatedSprite2D"]
+z_index = -1
+position = Vector2(-100, -79)
+sprite_frames = SubResource("SpriteFrames_dhuea")
+autoplay = "default"
+script = ExtResource("2_jvt03")
+
+[node name="InteractionArea" parent="." instance=ExtResource("1_ekein")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_qw8tj")
