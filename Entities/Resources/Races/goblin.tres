@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Race" load_steps=2 format=3 uid="uid://cxk76ptm7djr7"]
+
+[ext_resource type="Script" uid="uid://qf0u3uaxcv4v" path="res://Entities/Resources/Races/races.gd" id="1_pisxd"]
+
+[resource]
+script = ExtResource("1_pisxd")
+might_multiplier = 0
+agility_multiplier = -1
+endurance_multiplier = -1
+intelligence_multiplier = 0
+cunning_multiplier = 0
+willpower_multiplier = 0
+charisma_multiplier = 0
+influence_multiplier = 0
+appearance_multiplier = 0
+start_xp_bonus = 0
+speed_bonus = -10
+vision_bonus = 0
+health_bonus = 0
+size_category = 3
+race_name = "Goblin"
+description = " A versatile and balanced race"

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Race" load_steps=2 format=3 uid="uid://b0igx0lguuwrx"]
+
+[ext_resource type="Script" uid="uid://qf0u3uaxcv4v" path="res://Entities/Resources/Races/races.gd" id="1_4i2st"]
+
+[resource]
+script = ExtResource("1_4i2st")
+might_multiplier = -1
+agility_multiplier = -1
+endurance_multiplier = -1
+intelligence_multiplier = -1
+cunning_multiplier = -1
+willpower_multiplier = -1
+charisma_multiplier = -1
+influence_multiplier = -1
+appearance_multiplier = -1
+start_xp_bonus = 32
+speed_bonus = 0.0
+vision_bonus = 0
+health_bonus = 0
+size_category = 4
+race_name = "Human"
+description = " A versatile and balanced race"

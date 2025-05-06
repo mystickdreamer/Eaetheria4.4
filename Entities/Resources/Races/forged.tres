@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Race" load_steps=2 format=3 uid="uid://fjr1flc8nh4e"]
+
+[ext_resource type="Script" uid="uid://qf0u3uaxcv4v" path="res://Entities/Resources/Races/races.gd" id="1_u8xl4"]
+
+[resource]
+script = ExtResource("1_u8xl4")
+might_multiplier = 0
+agility_multiplier = 0
+endurance_multiplier = -2
+intelligence_multiplier = 0
+cunning_multiplier = 0
+willpower_multiplier = 2
+charisma_multiplier = 0
+influence_multiplier = 0
+appearance_multiplier = 0
+start_xp_bonus = 0
+speed_bonus = 0.0
+vision_bonus = 0
+health_bonus = 0
+size_category = 4
+race_name = "Forged"
+description = " A versatile and balanced race"

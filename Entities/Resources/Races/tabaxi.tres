@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Race" load_steps=2 format=3 uid="uid://gyh8etdiwq6d"]
+
+[ext_resource type="Script" uid="uid://qf0u3uaxcv4v" path="res://Entities/Resources/Races/races.gd" id="1_eyyvv"]
+
+[resource]
+script = ExtResource("1_eyyvv")
+might_multiplier = 0
+agility_multiplier = -1
+endurance_multiplier = 0
+intelligence_multiplier = 0
+cunning_multiplier = 0
+willpower_multiplier = 0
+charisma_multiplier = -1
+influence_multiplier = 0
+appearance_multiplier = 0
+start_xp_bonus = 0
+speed_bonus = 20
+vision_bonus = 0
+health_bonus = 0
+size_category = 4
+race_name = "Felarion"
+description = " A versatile and balanced race"

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Race" load_steps=2 format=3 uid="uid://jsvr5gmjq4yh"]
+
+[ext_resource type="Script" uid="uid://qf0u3uaxcv4v" path="res://Entities/Resources/Races/races.gd" id="1_k70ui"]
+
+[resource]
+script = ExtResource("1_k70ui")
+might_multiplier = 4
+agility_multiplier = -3
+endurance_multiplier = 0
+intelligence_multiplier = 0
+cunning_multiplier = 0
+willpower_multiplier = 0
+charisma_multiplier = 0
+influence_multiplier = 0
+appearance_multiplier = 0
+start_xp_bonus = 0
+speed_bonus = 0.0
+vision_bonus = 0
+health_bonus = 0
+size_category = 2
+race_name = "Pixie"
+description = " A versatile and balanced race"
