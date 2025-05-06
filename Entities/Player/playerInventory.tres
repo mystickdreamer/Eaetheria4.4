@@ -1,0 +1,74 @@
+[gd_resource type="Resource" script_class="InventoryData" load_steps=25 format=3 uid="uid://douyldpwx6ibb"]
+
+[ext_resource type="Script" uid="uid://dt6lni8r1f2fw" path="res://Entities/Abilities/inventory/inventory_data.gd" id="1_5a466"]
+[ext_resource type="Script" uid="uid://bxlv75oww6l8l" path="res://Entities/Abilities/inventory/slot_data.gd" id="2_eyovh"]
+[ext_resource type="Resource" uid="uid://5jtjlhngeq6u" path="res://Entities/Objects/Items/oakLog.tres" id="3_klu5b"]
+[ext_resource type="Resource" uid="uid://bxb2x6dia3mf1" path="res://Entities/Abilities/Spells/Spell Items/Blink/BlinkSkill.tres" id="4_8n1y5"]
+[ext_resource type="Resource" uid="uid://c5mrphno5jd67" path="res://Entities/Objects/Items/blueBook.tres" id="4_hgeiu"]
+[ext_resource type="Resource" uid="uid://wqfv4k0fcmkt" path="res://Entities/Objects/Items/oakPlank.tres" id="5_4dbul"]
+[ext_resource type="Resource" uid="uid://bp8wlidphmq3j" path="res://Entities/Objects/Items/Equipment/00.Head/TestHat.tres" id="5_chdji"]
+[ext_resource type="Resource" uid="uid://byeqfhkc4tjws" path="res://Entities/Objects/Items/Lockpick/wooden_lockpick.tres" id="5_x5tc3"]
+[ext_resource type="Resource" uid="uid://ctc64yi0bpaky" path="res://Entities/Objects/Items/healthPotion1.tres" id="6_k7pba"]
+[ext_resource type="Resource" uid="uid://b57a1nak3nbei" path="res://Entities/Objects/Items/Equipment/00.Weapons/iron_sword.tres" id="7_1vf6p"]
+[ext_resource type="Resource" uid="uid://prqvdnawghjw" path="res://Entities/Objects/Items/Equipment/00.Weapons/plain_bow.tres" id="8_fenqj"]
+[ext_resource type="Resource" uid="uid://boq38uuuvl8ws" path="res://Entities/Objects/Items/Equipment/00.Armor/LeatherArmor.tres" id="9_7j0y5"]
+[ext_resource type="Resource" uid="uid://ofk5or13kaua" path="res://Entities/Objects/Items/Equipment/00.Weapons/wooden_sword.tres" id="10_whb2l"]
+
+[sub_resource type="Resource" id="Resource_l36k8"]
+script = ExtResource("2_eyovh")
+item_data = ExtResource("4_hgeiu")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_scsrk"]
+script = ExtResource("2_eyovh")
+item_data = ExtResource("4_8n1y5")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_41atj"]
+script = ExtResource("2_eyovh")
+item_data = ExtResource("5_x5tc3")
+quantity = 999
+
+[sub_resource type="Resource" id="Resource_tnmny"]
+script = ExtResource("2_eyovh")
+item_data = ExtResource("5_chdji")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_tc3t3"]
+script = ExtResource("2_eyovh")
+item_data = ExtResource("7_1vf6p")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_4q704"]
+script = ExtResource("2_eyovh")
+item_data = ExtResource("8_fenqj")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_ojhqm"]
+script = ExtResource("2_eyovh")
+item_data = ExtResource("6_k7pba")
+quantity = 4
+
+[sub_resource type="Resource" id="Resource_4lrok"]
+script = ExtResource("2_eyovh")
+item_data = ExtResource("3_klu5b")
+quantity = 6
+
+[sub_resource type="Resource" id="Resource_jixhs"]
+script = ExtResource("2_eyovh")
+item_data = ExtResource("5_4dbul")
+quantity = 4
+
+[sub_resource type="Resource" id="Resource_n5ane"]
+script = ExtResource("2_eyovh")
+item_data = ExtResource("9_7j0y5")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_puscu"]
+script = ExtResource("2_eyovh")
+item_data = ExtResource("10_whb2l")
+quantity = 1
+
+[resource]
+script = ExtResource("1_5a466")
+slot_datas = Array[ExtResource("2_eyovh")]([SubResource("Resource_l36k8"), SubResource("Resource_scsrk"), SubResource("Resource_41atj"), SubResource("Resource_tnmny"), SubResource("Resource_tc3t3"), SubResource("Resource_4q704"), SubResource("Resource_ojhqm"), SubResource("Resource_4lrok"), null, SubResource("Resource_jixhs"), null, SubResource("Resource_n5ane"), SubResource("Resource_puscu"), null, null])

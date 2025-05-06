@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="craftingRecipe" load_steps=6 format=3 uid="uid://ck255mmjw5at6"]
+
+[ext_resource type="Script" uid="uid://bx4kfwvh1f2vl" path="res://Entities/Objects/Items/Crafting/Scripts/craftingRecipe.gd" id="1_ahhie"]
+[ext_resource type="Resource" uid="uid://wqfv4k0fcmkt" path="res://Entities/Objects/Items/oakPlank.tres" id="1_gilck"]
+[ext_resource type="Resource" uid="uid://5jtjlhngeq6u" path="res://Entities/Objects/Items/oakLog.tres" id="2_hsvcy"]
+[ext_resource type="Script" uid="uid://lemfcygwgvpr" path="res://Entities/Objects/Items/Crafting/Scripts/craftingRecipeRequirement.gd" id="3_w37u3"]
+
+[sub_resource type="Resource" id="Resource_tvs8k"]
+script = ExtResource("3_w37u3")
+item = ExtResource("2_hsvcy")
+quantity = 1
+skillToUse = 8
+successesNeeded = 1
+
+[resource]
+script = ExtResource("1_ahhie")
+item = ExtResource("1_gilck")
+requirements = Array[ExtResource("3_w37u3")]([SubResource("Resource_tvs8k")])

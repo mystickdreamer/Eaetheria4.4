@@ -1,0 +1,2 @@
+extends itemData
+class_name ItemDataEquip

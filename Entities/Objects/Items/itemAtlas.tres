@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://5x14hky66gk1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vax3x"]
+
+[resource]
+atlas = SubResource("CompressedTexture2D_vax3x")
+region = Rect2(288, 352, 32, 32)

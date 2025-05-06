@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="itemData" load_steps=5 format=3 uid="uid://ofk5or13kaua"]
+
+[ext_resource type="Script" uid="uid://mhm7oscm7a62" path="res://Entities/Objects/Items/Scripts/Effects/item_effect.gd" id="1_lqy5b"]
+[ext_resource type="Script" uid="uid://bquow8ac1tw1b" path="res://Entities/Objects/Items/Scripts/itemData.gd" id="2_rhbgy"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b1pe5"]
+load_path = "res://.godot/imported/#1 - Transparent Icons.png-2045bff79ae53f6ec913f5aeff58cb32.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhorh"]
+atlas = SubResource("CompressedTexture2D_b1pe5")
+region = Rect2(0, 160, 32, 32)
+
+[resource]
+script = ExtResource("2_rhbgy")
+itemSlottype = 7
+type = 2
+stackable = false
+name = "Wooden Sword"
+description = "This is only slightly more dangerous than a childs toy"
+texture = SubResource("AtlasTexture_rhorh")
+weight = 5.0
+item_cost = 0
+attack_damage = 4
+armor_bonus = 0
+evade_penalty = 0
+weapon_range = 0
+Skill_Used = 3
+companion_skill = 1
+visibility_range = 0
+intelligence_bonus = 0
+mana_bonus = 0
+req_str = 0
+req_int = 0
+effects = Array[ExtResource("1_lqy5b")]([])
+magical = false
+health_restore = 0
+mana_restore = 0
+enchant_mana = 0
+enchant_level = 0
+is_quest_item = false
+quest_id = "None"
+durability = 100
+max_durability = 100
+uses = 1
+max_uses = 1
+triggers_event = false
+event_id = "NONE"
+upgrade_level = 0
+max_upgrade_level = 0
+item_size = 4
+item_stolen = false

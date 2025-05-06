@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="itemData" load_steps=4 format=3 uid="uid://boq38uuuvl8ws"]
+
+[ext_resource type="Script" uid="uid://mhm7oscm7a62" path="res://Entities/Objects/Items/Scripts/Effects/item_effect.gd" id="1_qt5rx"]
+[ext_resource type="Script" uid="uid://bquow8ac1tw1b" path="res://Entities/Objects/Items/Scripts/itemData.gd" id="2_xqsc2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gse2l"]
+region = Rect2(352, 224, 32, 32)
+
+[resource]
+script = ExtResource("2_xqsc2")
+itemSlottype = 1
+type = 2
+stackable = false
+name = "Leather Armor"
+description = "This is regular leather armor."
+texture = SubResource("AtlasTexture_gse2l")
+weight = 1.0
+item_cost = 10
+attack_damage = 0
+armor_bonus = 2
+evade_penalty = -1
+weapon_range = 0
+Skill_Used = 7
+companion_skill = 1
+visibility_range = 0
+intelligence_bonus = 0
+mana_bonus = 0
+req_str = 2
+req_int = 0
+effects = Array[ExtResource("1_qt5rx")]([])
+magical = false
+health_restore = 0
+mana_restore = 0
+enchant_mana = 0
+enchant_level = 0
+is_quest_item = false
+quest_id = "None"
+durability = 100
+max_durability = 100
+uses = 1
+max_uses = 1
+triggers_event = false
+event_id = "NONE"
+upgrade_level = 0
+max_upgrade_level = 0
+item_size = 4
+item_stolen = false
