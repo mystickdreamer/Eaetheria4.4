@@ -1,0 +1,46 @@
+[gd_scene load_steps=10 format=3 uid="uid://cny6f0cmp6oge"]
+
+[ext_resource type="Script" uid="uid://dvyx6j5xaawct" path="res://Entities/Abilities/attack/weapon.gd" id="1_i6hjk"]
+[ext_resource type="Texture2D" uid="uid://enmxlp7xeen7" path="res://Assets/#1 - Transparent Icons.png" id="2_dj8d3"]
+[ext_resource type="PackedScene" uid="uid://quqsa6fn6xv6" path="res://Entities/Player/player_damage_box.tscn" id="3_h3y12"]
+[ext_resource type="Script" uid="uid://by1kngh4lk11p" path="res://Entities/Player/player_damage_box.gd" id="4_fclv1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hdmb6"]
+load_path = "res://.godot/imported/sword_swing.png-3377b2d23ebe87dec7fc140319a933bc.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajjly"]
+atlas = SubResource("CompressedTexture2D_hdmb6")
+region = Rect2(193, 64, 67, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i37l3"]
+atlas = ExtResource("2_dj8d3")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6761"]
+size = Vector2(26, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1glm3"]
+size = Vector2(20, 8)
+
+[node name="Weapon" type="CharacterBody2D"]
+script = ExtResource("1_i6hjk")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(2, -13)
+scale = Vector2(0.6, 0.6)
+texture = SubResource("AtlasTexture_ajjly")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 3.92817
+texture = SubResource("AtlasTexture_i37l3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_k6761")
+
+[node name="DamageBox" parent="." instance=ExtResource("3_h3y12")]
+script = ExtResource("4_fclv1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageBox"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_1glm3")

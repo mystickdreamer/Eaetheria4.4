@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cef71i3w6mrvx"]
+
+[ext_resource type="Script" uid="uid://dq82ndg7jkbra" path="res://Entities/Abilities/sneak/sneak.gd" id="1_gt1ec"]
+
+[node name="Sneak" type="Node2D"]
+script = ExtResource("1_gt1ec")

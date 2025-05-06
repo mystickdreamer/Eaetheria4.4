@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds7ik6vmti5nc"]
+
+[ext_resource type="PackedScene" uid="uid://clsyu1bcrjkxo" path="res://Entities/Abilities/inventory/slot.tscn" id="3_1h70u"]
+
+[sub_resource type="Resource" id="Resource_jdws5"]
+metadata/__load_path__ = "res://Entities/Objects/Containers/ContainerInventory_interface.gd"
+
+[sub_resource type="Resource" id="Resource_sw8qo"]
+metadata/__load_path__ = "res://Entities/Objects/Containers/ContainerInventory.tscn"
+
+[node name="ContainerUI" type="CanvasLayer"]
+
+[node name="ContainerInventoryInterface" type="PanelContainer" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("Resource_jdws5")
+
+[node name="ContainerInventory" parent="ContainerInventoryInterface"]
+layout_mode = 2
+
+[node name="GrabbedSlot" parent="ContainerInventoryInterface" instance=ExtResource("3_1h70u")]
+visible = false
+layout_mode = 2

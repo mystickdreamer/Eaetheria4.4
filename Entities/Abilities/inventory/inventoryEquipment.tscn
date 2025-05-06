@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://44euboxji0oi"]
+
+[ext_resource type="Script" uid="uid://dlpldtcwqvmmm" path="res://Entities/Abilities/inventory/inventory.gd" id="1_ts6hs"]
+[ext_resource type="PackedScene" uid="uid://clsyu1bcrjkxo" path="res://Entities/Abilities/inventory/slot.tscn" id="2_g1wu6"]
+
+[node name="Inventory" type="PanelContainer"]
+offset_left = 704.0
+offset_top = 133.0
+offset_right = 784.0
+offset_bottom = 213.0
+mouse_filter = 1
+script = ExtResource("1_ts6hs")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="ItemGrid" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Slot" parent="MarginContainer/ItemGrid" instance=ExtResource("2_g1wu6")]
+layout_mode = 2

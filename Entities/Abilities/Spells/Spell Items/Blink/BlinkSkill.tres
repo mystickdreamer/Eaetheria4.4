@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="itemData" load_steps=6 format=3 uid="uid://bxb2x6dia3mf1"]
+
+[ext_resource type="Script" uid="uid://mhm7oscm7a62" path="res://Entities/Objects/Items/Scripts/Effects/item_effect.gd" id="1_fuhee"]
+[ext_resource type="Script" uid="uid://dyxke03pdxniy" path="res://Entities/Abilities/Spells/Spell Items/Blink/BlinkSkill.gd" id="2_x31rp"]
+[ext_resource type="Script" uid="uid://bquow8ac1tw1b" path="res://Entities/Objects/Items/Scripts/itemData.gd" id="3_0a37j"]
+
+[sub_resource type="Resource" id="Resource_bbg0p"]
+script = ExtResource("2_x31rp")
+skill = "blink"
+use_description = ""
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tifbo"]
+region = Rect2(0, 672, 32, 32)
+
+[resource]
+script = ExtResource("3_0a37j")
+itemSlottype = 7
+type = 0
+stackable = false
+name = "Blink Skill"
+description = "This is the Blink Skill"
+texture = SubResource("AtlasTexture_tifbo")
+weight = 1.0
+item_cost = 0
+attack_damage = 0
+armor_bonus = 0
+evade_penalty = 0
+weapon_range = 0
+Skill_Used = 9
+companion_skill = 1
+visibility_range = 0
+intelligence_bonus = 0
+mana_bonus = 0
+req_str = 0
+req_int = 0
+effects = Array[ExtResource("1_fuhee")]([SubResource("Resource_bbg0p")])
+magical = true
+health_restore = 0
+mana_restore = 0
+enchant_mana = 0
+enchant_level = 0
+is_quest_item = false
+quest_id = "None"
+durability = 100
+max_durability = 100
+uses = -1
+max_uses = 1
+triggers_event = false
+event_id = "NONE"
+upgrade_level = 0
+max_upgrade_level = 0
+item_size = 1
+item_stolen = false

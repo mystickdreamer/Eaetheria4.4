@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfg04gyyjb4p1"]
+
+[ext_resource type="Script" uid="uid://c78t8038mrh8p" path="res://Entities/Abilities/attack/ammo.gd" id="1_olqbs"]
+[ext_resource type="PackedScene" uid="uid://quqsa6fn6xv6" path="res://Entities/Player/player_damage_box.tscn" id="2_nlk4x"]
+[ext_resource type="Script" uid="uid://by1kngh4lk11p" path="res://Entities/Player/player_damage_box.gd" id="3_d8t1v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vv31x"]
+size = Vector2(11, 5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w7atk"]
+load_path = "res://.godot/imported/#1 - Transparent Icons.png-2045bff79ae53f6ec913f5aeff58cb32.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vny6o"]
+atlas = SubResource("CompressedTexture2D_w7atk")
+region = Rect2(102, 195, 9, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g16u3"]
+size = Vector2(23, 7)
+
+[node name="Ammo" type="CharacterBody2D"]
+motion_mode = 1
+wall_min_slide_angle = 3.14159
+script = ExtResource("1_olqbs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.5, 0.5)
+shape = SubResource("RectangleShape2D_vv31x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.56206
+texture = SubResource("AtlasTexture_vny6o")
+
+[node name="DamageBox" parent="." instance=ExtResource("2_nlk4x")]
+script = ExtResource("3_d8t1v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageBox"]
+position = Vector2(-1.5, -0.5)
+shape = SubResource("RectangleShape2D_g16u3")

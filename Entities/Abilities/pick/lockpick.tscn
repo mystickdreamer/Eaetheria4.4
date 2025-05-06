@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0qrxiv41i50b"]
+
+[ext_resource type="Texture2D" uid="uid://5x14hky66gk1" path="res://Entities/Objects/Items/itemAtlas.tres" id="1_mo4qi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sf5db"]
+
+[node name="Lockpick" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sf5db")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -2.35322
+texture = ExtResource("1_mo4qi")

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dw03lc3wpnxfe"]
+
+[ext_resource type="Script" uid="uid://b7bq26h3bs1wi" path="res://Entities/Abilities/attack/bow.gd" id="1_d8jv8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e52po"]
+size = Vector2(13, 27)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3det4"]
+load_path = "res://.godot/imported/#1 - Transparent Icons.png-2045bff79ae53f6ec913f5aeff58cb32.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nj6y6"]
+atlas = SubResource("CompressedTexture2D_3det4")
+region = Rect2(111, 195, 14, 27)
+
+[node name="Bow" type="CharacterBody2D"]
+script = ExtResource("1_d8jv8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16.5, 0.5)
+shape = SubResource("RectangleShape2D_e52po")
+
+[node name="bow" type="Sprite2D" parent="."]
+position = Vector2(14, 7.45058e-09)
+rotation = -3.14856
+texture = SubResource("AtlasTexture_nj6y6")

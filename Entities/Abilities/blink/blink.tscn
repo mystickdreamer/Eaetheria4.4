@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b878hf056bsn7"]
+
+[ext_resource type="Script" uid="uid://bs7dkwlvtmly4" path="res://Entities/Abilities/blink/blink.gd" id="1_k77h3"]
+
+[node name="Blink" type="Node2D"]
+script = ExtResource("1_k77h3")
