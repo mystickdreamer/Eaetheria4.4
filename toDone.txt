@@ -1,0 +1,19 @@
+add if_flying variable - Done
+add is_flying when selecting pixie race - Done
+
+Inventory - Done
+
+Change xp gain to gain xp when using the skill
+
+Added locked chest bool, locked_dc, and thievery check to the chest if it is locked
+
+added item_stolen flag to itemData
+
+Code for lockpicking is done under the lockpick.gd script ????
+Decided to use an item that is a lockpick and have the item carry the script 
+
+fix that weapon_stat does not change to 0 when weapon is removed
+
+attack weapon sprites now change depending on what weapon is equipped
+Added the ability to have bows with arrows that fly
+Corrected XP when damage is done to NPCs 

@@ -1,0 +1,5 @@
+s.skill1 = s.weapon_skill_name
+	s.stat = s.weapon_stat
+	s.attack_skill = s.weapon_skill
+	s.attack_skill2 = s.weapon_damage_bonus
+	s.attack_stat = s.weapon_stat

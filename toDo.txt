@@ -1,0 +1,101 @@
+Check lockpicking code
+
+
+Skills and XP:
+	stealth will gain xp when they either succed or fail vs perception, not just randomly activating the skill
+
+Equipment
+	Armor Slot - Done
+	Head - sight, 
+	Belt - Belt: Consider adding a mechanic where certain belts can hold more than others, 
+		or some might have special slots for unique items like keys or magical components.
+	Feet - movement buff, evasion buffs,
+	Amulet - Special effects like magic resistance, health regeneration, or skill boosts.
+	Hand - Tools, Offhand damage?, 
+	Ring - Different rings could provide stat boosts, elemental resistances, or passive abilities.
+	Weapon - Combat
+
+Items - 
+
+Status Effects:
+	wet
+	burning
+	chilled
+	frozen
+	webbed
+	poisoned
+	stunned - removes evasion ability 
+	flying
+	jumping
+	cursed
+	blessed
+	blind
+	fear
+	rage
+	invisible
+	slowed
+	
+	Combine status effects:
+		if wet and chilled, then get frozen
+		wet and burning - steam blinds
+
+day/night cycle
+	Certain spells or activities might be more effective or available only at certain times 
+	(e.g., night for necromancy, day for healing magic).
+	Creature Behavior: Some creatures might only appear or be more aggressive at night.
+Weather System: Beyond day/night, weather could affect gameplay, like rain enhancing water spells or wind affecting arrows.
+
+recipes
+
+chracter creation
+	Backgrounds: Provide starting bonuses or unique skills based on character backstory.
+	Appearance Customization: Affect how NPCs react to the player based on appearance.	
+	Unique Starting Items: Based on background, give players unique items that hint at their 
+		past or provide a small advantage in their chosen field.
+Lore:
+	coins
+
+Crafting Recipes
+	Upgrades: Allow for upgrading existing items or creating new ones with better stats.
+	Unique Crafts: Items that require specific conditions or rare materials, perhaps tied 
+	to guild activities.
+
+Spell Recipes - The player will make a scroll with the spell information on it, 
+that when read(right clicked) it adds the spell to the dictionary of skills
+
+Spell ideas:
+	Casting lightning in the rain has a chance to fork back to the user due to having the wet status
+	Environmental Spells: Spells that interact with the environment, like creating temporary bridges or altering terrain.
+	Reverse Effects: Spells that can be turned against the caster under certain conditions (like your lightning in the rain idea).
+
+Environmental Puzzles: Use the environment and weather mechanics for puzzle-solving, like using 
+	light spells to grow plants for climbing or freezing water to cross rivers.
+
+Guild reputations:
+	The Arcanium
+	Order of Elements
+	Mystics of the Veil
+	Blade Masters
+	Guardians of the Wild
+	Order of the Shield
+	Thieves' Guild
+	Artificer's League
+	Guild Conflicts: Reputation with one guild might negatively affect it with another, 
+		leading to interesting dynamics.
+Faction System: Beyond guilds, include other factions like city-states, nomadic tribes, or 
+	magical creatures with whom players can gain or lose favor.	
+	
+Lockpick chests, get components back can bring to guild when successful unlock
+Thievery- steal items if pass roll, thieves guild has fence, stealing items raises thieves guild reputation
+Figure out how to trigger item_stolen flag when an item gets stolen from person or chest
+Thievery or Lockpicking:
+	Consequences: Failed attempts could raise alarms, lower reputation with certain guilds, or lead to legal repercussions.
+	
+	Place "Moonbeam" down to teleport back to that location
+
+OverlandMap
+
+
+Game UI
+
+character, have a character that says that nobody will ever see him, or talk to him, express my own feelings in this character.

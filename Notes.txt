@@ -1,0 +1,1 @@
+Spells use the recipe type system where the receipe determines skills needed and successes, then it gives them an object they'll be able to use on the hotbar 

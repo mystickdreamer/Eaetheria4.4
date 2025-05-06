@@ -1,0 +1,7 @@
+Magick:
+	
+	Craft spell button in inventory? Character screen? Magick Screen? Where?
+	Have options the player can select: Choose Verbiage and Nounage
+	Then have players select all options for spells Range, AOE, etc
+	Then have the player roll the specifics to see if they successfully craft the spell, 
+	if they succeed they get the spell scroll to put on their hotbar
