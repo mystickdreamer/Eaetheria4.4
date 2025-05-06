@@ -1,0 +1,27 @@
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://ch6r13uqhwu4o"]
+
+[ext_resource type="Texture2D" uid="uid://bu7xx11omawjp" path="res://Levels/OverWorld/Individual Tiles/hexUnderDirt.png" id="1_a4q3t"]
+[ext_resource type="Texture2D" uid="uid://bogrbb4n5e6s4" path="res://Levels/OverWorld/Individual Tiles/hexUnderOcean.png" id="2_uitsj"]
+[ext_resource type="Texture2D" uid="uid://wtsjmxt2f7o7" path="res://Levels/OverWorld/Individual Tiles/hexUnderVoid.png" id="3_wsqb1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xxjw7"]
+texture = ExtResource("1_a4q3t")
+texture_region_size = Vector2i(256, 260)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ntn8d"]
+texture = ExtResource("2_uitsj")
+texture_region_size = Vector2i(256, 260)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2lugn"]
+texture = ExtResource("3_wsqb1")
+texture_region_size = Vector2i(256, 260)
+0:0/0 = 0
+
+[resource]
+tile_shape = 3
+tile_size = Vector2i(256, 260)
+sources/0 = SubResource("TileSetAtlasSource_xxjw7")
+sources/1 = SubResource("TileSetAtlasSource_ntn8d")
+sources/2 = SubResource("TileSetAtlasSource_2lugn")

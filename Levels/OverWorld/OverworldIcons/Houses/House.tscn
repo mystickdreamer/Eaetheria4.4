@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://wln50ks3ofv4"]
+
+[ext_resource type="Texture2D" uid="uid://cgo1pgrc3klt2" path="res://Levels/OverWorld/OverworldIcons/Houses/house00.png" id="1_6rtgk"]
+
+[node name="House" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6rtgk")

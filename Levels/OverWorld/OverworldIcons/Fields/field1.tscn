@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp0wdt8erwcs6"]
+
+[ext_resource type="Texture2D" uid="uid://btnxkvsxibmh6" path="res://Levels/OverWorld/OverworldIcons/Fields/field00.png" id="1_shjep"]
+
+[node name="Field1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_shjep")

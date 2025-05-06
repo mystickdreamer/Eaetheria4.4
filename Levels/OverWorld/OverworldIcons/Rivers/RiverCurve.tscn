@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpimgnsvb0nuj"]
+
+[ext_resource type="Texture2D" uid="uid://br2hpfi5txkt6" path="res://Levels/OverWorld/OverworldIcons/Rivers/Sprites/hexRiver001010-01.png" id="1_mhi82"]
+
+[node name="River1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mhi82")
