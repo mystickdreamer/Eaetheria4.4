@@ -16,8 +16,6 @@ func grab_slot_data(index: int)->SlotData:
 	var slot_data = slot_datas[index]
 	
 	if slot_data:
-#		if get_parent().slot_data.item_data.itemSlottype == itemData.itemSlotType.Armor:
-#			print("This ")
 		slot_datas[index] = null
 		inventory_updated.emit(self)
 		return slot_data
