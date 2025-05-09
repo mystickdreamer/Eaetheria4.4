@@ -1,4 +1,4 @@
-Check lockpicking code
+Fix taking damage for monsters and player
 
 
 Skills and XP:

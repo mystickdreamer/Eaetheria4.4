@@ -17,9 +17,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-globalDiceRoller="*res://00.Globals/diceRoller.gd"
+LevelManager="*res://00.Globals/GlobalLevelManager.gd"
 PlayerManager="*res://00.Globals/globalPlayerManager.gd"
+globalDiceRoller="*res://00.Globals/diceRoller.gd"
 InteractionManager="*res://Entities/Interactions/InteractionManager.tscn"
+SceneTransition="*res://Levels/Scripts/SceneTransition/sceneTransition.tscn"
 
 [display]
 

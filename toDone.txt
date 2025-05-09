@@ -9,7 +9,8 @@ Added locked chest bool, locked_dc, and thievery check to the chest if it is loc
 
 added item_stolen flag to itemData
 
-Code for lockpicking is done under the lockpick.gd script ????
+Code for lockpicking is done under the lockpick.gd script 
+experience for lockpicking
 Decided to use an item that is a lockpick and have the item carry the script 
 
 fix that weapon_stat does not change to 0 when weapon is removed
