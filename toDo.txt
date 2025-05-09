@@ -1,3 +1,5 @@
+working on NPCs and behaviors, along with new system for modular sprites
+
 Fix taking damage for monsters and player
 
 
