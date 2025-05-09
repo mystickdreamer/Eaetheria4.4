@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=4 uid="uid://cv8fsp5rwiosu"]
 
-[ext_resource type="Texture2D" uid="uid://bld8am4wyuo5f" path="res://Assets/TileMapLayers/Internal/atlas_32x.png" id="1_1knev"]
+[ext_resource type="Texture2D" uid="uid://bld8am4wyuo5f" path="res://Assets/TileMapLayers/Internal/SuperRetro/atlas_32x.png" id="1_1knev"]
 [ext_resource type="PackedScene" uid="uid://5rfyhoacjhwe" path="res://Entities/Player/player.tscn" id="2_d88h3"]
 [ext_resource type="PackedScene" uid="uid://dmt8ruw32ibpg" path="res://Levels/Interactables/InternalTallBookshelf.tscn" id="3_71o6i"]
 [ext_resource type="PackedScene" uid="uid://b3wpxt0kotn8p" path="res://Levels/Interactables/InternalTallCabinet.tscn" id="3_h0o28"]

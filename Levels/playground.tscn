@@ -1,8 +1,7 @@
-[gd_scene load_steps=20 format=4 uid="uid://daynpsscq74e7"]
+[gd_scene load_steps=22 format=4 uid="uid://daynpsscq74e7"]
 
 [ext_resource type="Script" uid="uid://bi484n7ffrm2w" path="res://Levels/Scripts/level.gd" id="1_0oqei"]
-[ext_resource type="PackedScene" uid="uid://5rfyhoacjhwe" path="res://Entities/Player/player.tscn" id="1_dsa78"]
-[ext_resource type="Texture2D" uid="uid://bld8am4wyuo5f" path="res://Assets/TileMapLayers/Internal/atlas_32x.png" id="2_kj0wo"]
+[ext_resource type="Texture2D" uid="uid://bld8am4wyuo5f" path="res://Assets/TileMapLayers/Internal/SuperRetro/atlas_32x.png" id="2_kj0wo"]
 [ext_resource type="PackedScene" uid="uid://brbtkru8ytaff" path="res://Levels/Interactables/Chests/Chest1/Chest1.tscn" id="3_gd31y"]
 [ext_resource type="Script" uid="uid://dt6lni8r1f2fw" path="res://Entities/Abilities/inventory/inventory_data.gd" id="4_ewklo"]
 [ext_resource type="Script" uid="uid://bxlv75oww6l8l" path="res://Entities/Abilities/inventory/slot_data.gd" id="5_02hdv"]
@@ -12,6 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://cwafluk8x45kg" path="res://Entities/Objects/item_pickup.tscn" id="9_ks0lf"]
 [ext_resource type="PackedScene" uid="uid://dfrn280s6ylx" path="res://Entities/Plants/Plant1/plant.tscn" id="11_qr3tp"]
 [ext_resource type="PackedScene" uid="uid://du2t74d35j6gv" path="res://Entities/Monsters/Slime/Slime 2/Slime.tscn" id="12_oyovs"]
+[ext_resource type="PackedScene" uid="uid://d2grvomkgoqy6" path="res://Entities/Monsters/NPCs/npc.tscn" id="13_olnmi"]
+[ext_resource type="PackedScene" uid="uid://b73d32lhen04h" path="res://Entities/Monsters/NPCs/behaviors/npc_behavior_wander.tscn" id="14_if7ny"]
+[ext_resource type="PackedScene" uid="uid://lw0mi6vqm4er" path="res://Entities/Player/player_spawn.tscn" id="23_pg85o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bfhy5"]
 texture = ExtResource("2_kj0wo")
@@ -2674,8 +2676,8 @@ quantity = 1
 y_sort_enabled = true
 script = ExtResource("1_0oqei")
 
-[node name="Player" parent="." instance=ExtResource("1_dsa78")]
-position = Vector2(28, 10)
+[node name="PlayerSpawn" parent="." instance=ExtResource("23_pg85o")]
+position = Vector2(-73, -58)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = -1
@@ -2683,12 +2685,12 @@ y_sort_enabled = true
 tile_map_data = PackedByteArray("AAD7//r/AAACAAYAAAD7//v/AAACAAYAAAD7//z/AAACAAYAAAD7//3/AAACAAYAAAD7//7/AAACAAYAAAD7////AAACAAYAAAD7/wAAAAACAAYAAAD7/wEAAAACAAYAAAD7/wIAAAACAAYAAAD7/wMAAAACAAYAAAD8//r/AAACAAYAAAD8//v/AAACAAYAAAD8//z/AAACAAYAAAD8//3/AAACAAYAAAD8//7/AAACAAYAAAD8////AAACAAYAAAD8/wAAAAACAAYAAAD8/wEAAAACAAYAAAD8/wIAAAACAAYAAAD8/wMAAAACAAYAAAD9//r/AAACAAYAAAD9//v/AAACAAYAAAD9//z/AAACAAYAAAD9//3/AAACAAYAAAD9//7/AAACAAYAAAD9////AAACAAYAAAD9/wAAAAACAAYAAAD9/wEAAAACAAYAAAD9/wIAAAACAAYAAAD9/wMAAAACAAYAAAD+//r/AAACAAYAAAD+//v/AAACAAYAAAD+//z/AAACAAYAAAD+//3/AAACAAYAAAD+//7/AAACAAYAAAD+////AAACAAYAAAD+/wAAAAACAAYAAAD+/wEAAAACAAYAAAD+/wIAAAACAAYAAAD+/wMAAAACAAYAAAD///r/AAACAAYAAAD///v/AAACAAYAAAD///z/AAACAAYAAAD///3/AAACAAYAAAD///7/AAACAAYAAAD/////AAACAAYAAAD//wAAAAACAAYAAAD//wEAAAACAAYAAAD//wIAAAACAAYAAAD//wMAAAACAAYAAAAAAPr/AAACAAYAAAAAAPv/AAACAAYAAAAAAPz/AAACAAYAAAAAAP3/AAACAAYAAAAAAP7/AAACAAYAAAAAAP//AAACAAYAAAAAAAAAAAACAAYAAAAAAAEAAAACAAYAAAAAAAIAAAACAAYAAAAAAAMAAAACAAYAAAABAPr/AAACAAYAAAABAPv/AAACAAYAAAABAPz/AAACAAYAAAABAP3/AAACAAYAAAABAP7/AAACAAYAAAABAP//AAACAAYAAAABAAAAAAACAAYAAAABAAEAAAACAAYAAAABAAIAAAACAAYAAAABAAMAAAACAAYAAAACAPr/AAACAAYAAAACAPv/AAACAAYAAAACAPz/AAACAAYAAAACAP3/AAACAAYAAAACAP7/AAACAAYAAAACAP//AAACAAYAAAACAAAAAAACAAYAAAACAAEAAAACAAYAAAACAAIAAAACAAYAAAACAAMAAAACAAYAAAADAPr/AAACAAYAAAADAPv/AAACAAYAAAADAPz/AAACAAYAAAADAP3/AAACAAYAAAADAP7/AAACAAYAAAADAP//AAACAAYAAAADAAAAAAACAAYAAAADAAEAAAACAAYAAAADAAIAAAACAAYAAAADAAMAAAACAAYAAAAEAPr/AAACAAYAAAAEAPv/AAACAAYAAAAEAPz/AAACAAYAAAAEAP3/AAACAAYAAAAEAP7/AAACAAYAAAAEAP//AAACAAYAAAAEAAAAAAACAAYAAAAEAAEAAAACAAYAAAAEAAIAAAACAAYAAAAEAAMAAAACAAYAAAA=")
 tile_set = SubResource("TileSet_mrs0e")
 
-[node name="Chest1" parent="." groups=["Interactable", "external_inventory", "interactable"] instance=ExtResource("3_gd31y")]
+[node name="Chest1" parent="." groups=["Interactable", "external_inventory"] instance=ExtResource("3_gd31y")]
 position = Vector2(-16, -70)
 inventory_data = SubResource("Resource_bmfww")
 is_lockable = true
 is_locked = true
-locked_dc = 3
+locked_dc = 2
 
 [node name="ItemPickup" parent="." instance=ExtResource("9_ks0lf")]
 position = Vector2(-56, 9)
@@ -2698,13 +2700,9 @@ slot_data = SubResource("Resource_whmm2")
 position = Vector2(42, -34)
 
 [node name="Slime" parent="." instance=ExtResource("12_oyovs")]
-position = Vector2(3, 55)
+position = Vector2(-52, 78)
 
-[node name="Slime2" parent="." instance=ExtResource("12_oyovs")]
-position = Vector2(93, 14)
+[node name="NPC" parent="." instance=ExtResource("13_olnmi")]
+position = Vector2(0, -2)
 
-[node name="Slime3" parent="." instance=ExtResource("12_oyovs")]
-position = Vector2(-110, -14)
-
-[node name="Slime4" parent="." instance=ExtResource("12_oyovs")]
-position = Vector2(-69, 66)
+[node name="NpcBehaviorWander" parent="NPC" instance=ExtResource("14_if7ny")]
