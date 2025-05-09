@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://cvjwjir5w3dgc"]
 
-[ext_resource type="Script" uid="uid://d4bomqdj3e0e6" path="res://Entities/Abilities/Reusable/take_damage.gd" id="1_t0cdx"]
+[ext_resource type="Script" uid="uid://bq64s7is3e64x" path="res://Entities/Player/player_take_damage.gd" id="1_x0li4"]
 
 [node name="TakeDamage" type="Area2D"]
 collision_layer = 258
 collision_mask = 0
 monitoring = false
-script = ExtResource("1_t0cdx")
+script = ExtResource("1_x0li4")

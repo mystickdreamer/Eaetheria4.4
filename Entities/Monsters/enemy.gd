@@ -19,7 +19,8 @@ class_name Enemy
 @export var armor_min:int = 0
 @export var armor_max:int = 0
 
-
+@export var monsterSpeedMin: float = 5.0
+@export var monsterSpeedMax: float = 20.0
 
 signal direction_changed( new_direction: Vector2)
 #signal enemy_damaged(hurt_box: HurtBox)
@@ -33,6 +34,8 @@ var cardinal_direction: Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
 var invulnerable: bool = false
 var player: Player
+
+var monsterVelocity: float
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -53,6 +56,8 @@ func _ready() -> void:
 	martialArts = randi_range(MA_min, MA_max)
 	evasion = randi_range(evas_min, evas_max)
 	armor_skill = randi_range(armor_min, armor_max)
+	
+	monsterVelocity = randf_range(monsterSpeedMin, monsterSpeedMax)
 	
 	var check_size = might + endurance
 	if check_size > 2 and check_size < 4:
@@ -75,6 +80,7 @@ func _process(_delta) -> void:
 	pass
 	
 func _physics_process(_delta):
+	speed = monsterVelocity
 	super._physics_process(_delta)
 	move_and_slide()
 	
@@ -92,6 +98,7 @@ func setDirection( new_direction: Vector2) -> bool:
 	#If we are moving a different direction than we are facing then change direction	
 	cardinal_direction = new_dir
 	direction_changed.emit( new_dir )
+	
 	# Scaling the Sprite up, we need to make sure the sprite keeps the same scale.
 	var current_scale = animated_sprite.scale.abs()
 	animated_sprite.scale.x = -current_scale.x if cardinal_direction == Vector2.LEFT else current_scale.x
@@ -128,7 +135,7 @@ func animDirection()->String:
 #		enemy_damaged.emit(hurt_box)
 #	else:
 #		enemy_destroyed.emit(hurt_box)
-func take_damage(_damage: int)->void:
-	hp -= _damage
-	if hp <= 0:
-		queue_free()
+#func take_damage(_damage: int)->void:
+	#hp -= _damage
+	#if hp <= 0:
+		#queue_free()

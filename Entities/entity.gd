@@ -14,6 +14,7 @@ var sneakRoll: int = 0
 var armor_bonus: int = 0
 var armor_skill: int = 0
 var evasion_penalty: int = 0
+var armor_skill_name: String = ""
 
 @export var char_name: String = ""
 @export var race: Race = preload("res://Entities/Resources/Races/None.tres")
@@ -319,7 +320,14 @@ func modifyHealth(amount):
 func apply_damage(amount):
 	#This would be where roll for armor would come into it
 	if (hp > amount): hp -= amount
-	else: print("Ya dead")
+	else: 
+		hp = 0
+		print("Ya dead")
+	
+func take_damage(_damage: int)->void:
+	hp -= _damage
+	if hp <= 0:
+		queue_free()
 	
 func _physics_process(delta: float) -> void:
 	if wet_timer > 0:
@@ -493,23 +501,26 @@ func add_xp()->void:
 		skill_nameXP = ""
 	else:
 		print("There was a call to a skill name that does not exist")
+		
+var skill1: String
+var skill2: String
+var skill_stat: String
 
-var skill1: String = ""
-var skill2: String = ""
-var skill_stat: String = ""
 func add_xp_skill()->void:
 	if skill1 != "":
 		skill_nameXP = skill1
 		add_xp()
 		skill1 = ""
-	if skill_stat != "":
-		skill_nameXP = skill_stat
-		add_xp()
-		skill_stat = ""
 	if skill2 != "":
 		skill_nameXP = skill2
 		add_xp()
 		skill2 = ""
+	if skill_stat != "":
+		var stat_xp = skill_success_xp
+		var skill_success_xp = stat_xp / 2.0
+		skill_nameXP = skill_stat
+		add_xp()
+		skill_stat = ""
 	skill_success_xp = 0
 	pass
 	

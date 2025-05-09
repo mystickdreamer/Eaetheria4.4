@@ -1,4 +1,4 @@
-[gd_scene load_steps=146 format=3 uid="uid://5rfyhoacjhwe"]
+[gd_scene load_steps=148 format=3 uid="uid://5rfyhoacjhwe"]
 
 [ext_resource type="Script" uid="uid://drlebqfpwny23" path="res://Entities/Player/playerController.gd" id="1_a88vm"]
 [ext_resource type="Resource" uid="uid://douyldpwx6ibb" path="res://Entities/Player/playerInventory.tres" id="2_hlnub"]
@@ -20,6 +20,7 @@
 [ext_resource type="Resource" uid="uid://b0igx0lguuwrx" path="res://Entities/Resources/Races/human.tres" id="12_4sr44"]
 [ext_resource type="Texture2D" uid="uid://j7pcyj0lwais" path="res://Assets/Characters/Fairy/Fairy 1.png" id="12_04wdo"]
 [ext_resource type="Texture2D" uid="uid://8o5rex1gmtac" path="res://Assets/FX/633.png" id="15_s3x7r"]
+[ext_resource type="Texture2D" uid="uid://wuq2jyplhpks" path="res://Assets/UI/ui_big_pieces.png" id="19_v7p16"]
 
 [sub_resource type="Resource" id="Resource_a8x28"]
 script = ExtResource("3_a7lpn")
@@ -1579,7 +1580,12 @@ _data = {
 &"RESET": SubResource("Animation_f6ha6")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8wow"]
+atlas = ExtResource("19_v7p16")
+region = Rect2(207, 428, 34, 24)
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+z_index = 3
 y_sort_enabled = true
 collision_layer = 5
 collision_mask = 16
@@ -1596,18 +1602,6 @@ ring_inventory = SubResource("Resource_dxfd4")
 ring2_inventory = SubResource("Resource_22e1q")
 weapon_inventory = SubResource("Resource_oqi6a")
 race = ExtResource("12_4sr44")
-agility = 5
-hp = 2.0
-mana = 1000.0
-max_mana = 5.0
-archery = 1
-oneHand = 1
-lightArmor = 6
-medArmor = 7
-hevArmor = 8
-rego = 100
-stealth = 3
-thievery = 5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gnn0d")
@@ -1656,6 +1650,12 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("4_6sngg")
 
+[node name="Sprite2D" type="Sprite2D" parent="UI/InventoryInterface"]
+process_mode = 4
+position = Vector2(540.149, 184)
+scale = Vector2(1.99122, 2.66667)
+texture = SubResource("AtlasTexture_a8wow")
+
 [node name="PlayerInventory" parent="UI/InventoryInterface" instance=ExtResource("6_u6jmr")]
 layout_mode = 1
 anchors_preset = 4
@@ -1669,7 +1669,7 @@ grow_vertical = 2
 scale = Vector2(1.12001, 1)
 
 [node name="HeadInventory" parent="UI/InventoryInterface" instance=ExtResource("6_u6jmr")]
-modulate = Color(0.377919, 0.377919, 0.377919, 1)
+modulate = Color(0.376471, 0.376471, 0.376471, 1)
 layout_mode = 0
 offset_left = 499.0
 offset_top = 142.0

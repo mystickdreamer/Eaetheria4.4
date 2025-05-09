@@ -1,0 +1,108 @@
+[gd_scene load_steps=12 format=3 uid="uid://d2grvomkgoqy6"]
+
+[ext_resource type="Script" uid="uid://brsm2xcm7vrk6" path="res://Entities/Monsters/NPCs/scripts/npc.gd" id="1_i8rt4"]
+[ext_resource type="Texture2D" uid="uid://b7ab3bd41r26s" path="res://Assets/Characters/BodyParts/Bodies/idle.png" id="4_t6wtt"]
+[ext_resource type="Texture2D" uid="uid://ciwdaw3y3uwqv" path="res://Assets/Characters/BodyParts/Heads/Head 1/Head_1_idle.png" id="5_lljij"]
+[ext_resource type="Texture2D" uid="uid://2q10l48t75rd" path="res://Assets/Characters/BodyParts/Mouth/Mouth 1/Mouth_1_idle.png" id="6_8yc40"]
+[ext_resource type="Texture2D" uid="uid://biwulvl6iy6fl" path="res://Assets/Characters/BodyParts/Eyes/Eyes4/eyes_4_idle.png" id="7_bcnl4"]
+[ext_resource type="Texture2D" uid="uid://c6k2wplj2lucr" path="res://Assets/Characters/BodyParts/Hairs/Hair 1/Hair_1_idle.png" id="8_xy8sf"]
+[ext_resource type="Texture2D" uid="uid://dmjveb5qdyesh" path="res://Assets/Characters/BodyParts/Left/Feet/Foot_Left_idle.png" id="9_u45dy"]
+[ext_resource type="Texture2D" uid="uid://6fix86nneyjo" path="res://Assets/Characters/BodyParts/Right/Feet/Foot_Right_idle.png" id="10_vdcin"]
+[ext_resource type="Texture2D" uid="uid://d4g3bn6sv7u7d" path="res://Assets/Characters/BodyParts/Left/Hands/Hand_Left_idle.png" id="11_ul4k6"]
+[ext_resource type="Texture2D" uid="uid://pcvw0s2ec51w" path="res://Assets/Characters/BodyParts/Right/Hands/Hand_Right_idle.png" id="12_nu5qg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ox13"]
+radius = 4.99939
+height = 25.9968
+
+[node name="NPC" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 16
+motion_mode = 1
+script = ExtResource("1_i8rt4")
+
+[node name="bodyparts" type="Node" parent="."]
+
+[node name="left_wing" type="Sprite2D" parent="bodyparts"]
+position = Vector2(0.200001, -37.8)
+scale = Vector2(0.05, 0.05)
+hframes = 2
+vframes = 3
+
+[node name="right_wing" type="Sprite2D" parent="bodyparts"]
+position = Vector2(0.200001, -37.8)
+scale = Vector2(0.05, 0.05)
+hframes = 2
+vframes = 3
+
+[node name="body" type="Sprite2D" parent="bodyparts"]
+position = Vector2(0.200001, -37.8)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_t6wtt")
+hframes = 2
+vframes = 3
+
+[node name="head" type="Sprite2D" parent="bodyparts"]
+position = Vector2(0.200001, -37.8)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("5_lljij")
+hframes = 2
+vframes = 3
+
+[node name="mouth" type="Sprite2D" parent="bodyparts"]
+position = Vector2(0.200001, -37.8)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_8yc40")
+hframes = 2
+vframes = 3
+
+[node name="eyes" type="Sprite2D" parent="bodyparts"]
+position = Vector2(0.200001, -37.8)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("7_bcnl4")
+hframes = 2
+vframes = 3
+
+[node name="hair" type="Sprite2D" parent="bodyparts"]
+position = Vector2(0.200001, -37.8)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("8_xy8sf")
+hframes = 2
+vframes = 3
+
+[node name="left_foot" type="Sprite2D" parent="bodyparts"]
+position = Vector2(0.200001, -37.8)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("9_u45dy")
+hframes = 2
+vframes = 3
+
+[node name="right_foot" type="Sprite2D" parent="bodyparts"]
+position = Vector2(0.200001, -37.8)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("10_vdcin")
+hframes = 2
+vframes = 3
+
+[node name="left_hand" type="Sprite2D" parent="bodyparts"]
+position = Vector2(0.200001, -37.8)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("11_ul4k6")
+hframes = 2
+vframes = 3
+
+[node name="right_hand" type="Sprite2D" parent="bodyparts"]
+position = Vector2(0.200001, -37.8)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("12_nu5qg")
+hframes = 2
+vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+rotation = -1.5551
+shape = SubResource("CapsuleShape2D_6ox13")
+
+[node name="ShadowSprite" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

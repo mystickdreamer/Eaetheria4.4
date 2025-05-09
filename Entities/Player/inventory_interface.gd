@@ -181,14 +181,17 @@ func _on_armor_action_needed(action: String, slot_data: SlotData, index: int):
 					PlayerManager.player.armor_bonus += slot_data.item_data.armor_bonus
 					PlayerManager.player.evasion_penalty -= slot_data.item_data.evade_penalty
 					PlayerManager.player.armor_skill = PlayerManager.player.lightArmor
+					PlayerManager.player.armor_skill_name = "lightArmor"
 				7:
 					PlayerManager.player.armor_bonus += slot_data.item_data.armor_bonus
 					PlayerManager.player.evasion_penalty -= slot_data.item_data.evade_penalty
 					PlayerManager.player.armor_skill = PlayerManager.player.medArmor
+					PlayerManager.player.armor_skill_name = "medArmor"
 				8:
 					PlayerManager.player.armor_bonus += slot_data.item_data.armor_bonus
 					PlayerManager.player.evasion_penalty -= slot_data.item_data.evade_penalty
 					PlayerManager.player.armor_skill = PlayerManager.player.hevArmor
+					PlayerManager.player.armor_skill_name = "hevArmor"
 				5:
 					#MartialArts
 					PlayerManager.player.weapon_skill = PlayerManager.player.martialArts

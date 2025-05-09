@@ -1,10 +1,11 @@
-[gd_scene load_steps=69 format=3 uid="uid://du2t74d35j6gv"]
+[gd_scene load_steps=71 format=3 uid="uid://du2t74d35j6gv"]
 
 [ext_resource type="Texture2D" uid="uid://d2ah7y8tmxx7b" path="res://Assets/Monsters/Slimes/Slime.png" id="1_bjs45"]
 [ext_resource type="Script" uid="uid://c448r46m70faq" path="res://Entities/Monsters/enemy.gd" id="1_vl1v6"]
 [ext_resource type="PackedScene" uid="uid://bd0va48yoowtp" path="res://Entities/Abilities/Reusable/takeDamage.tscn" id="2_bhqi0"]
 [ext_resource type="Script" uid="uid://snsw4u2x3i8r" path="res://Entities/Monsters/Enemy States/EnemyStateMachine.gd" id="2_vr3sv"]
 [ext_resource type="Script" uid="uid://dl8a1gxsckq4p" path="res://Entities/Monsters/Enemy States/EnemyStateIdle.gd" id="3_cj16p"]
+[ext_resource type="PackedScene" uid="uid://bkidpgwq1rrwm" path="res://Entities/Abilities/Reusable/damage_box.tscn" id="3_trqi7"]
 [ext_resource type="Script" uid="uid://bd7tb78afsbs3" path="res://Entities/Monsters/Enemy States/EnemyStateWander.gd" id="4_hgel4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0i3u7"]
@@ -275,6 +276,9 @@ animations = [{
 "name": &"walkUp",
 "speed": 5.0
 }]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lv3l0"]
+radius = 29.0689
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kgwhc"]
 
@@ -1129,8 +1133,8 @@ motion_mode = 1
 script = ExtResource("1_vl1v6")
 might_max = 3
 end_max = 3
-MA_min = 3
-speed = 20.0
+MA_min = 1
+MA_max = 3
 
 [node name="ShadowSprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.316823, 0.208663, 0.0709452, 1)
@@ -1144,6 +1148,12 @@ y_sort_enabled = true
 position = Vector2(0, -23)
 sprite_frames = SubResource("SpriteFrames_beb46")
 animation = &"idleDown"
+
+[node name="DamageBox" parent="." instance=ExtResource("3_trqi7")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageBox"]
+position = Vector2(0, -11)
+shape = SubResource("CircleShape2D_lv3l0")
 
 [node name="TakeDamage" parent="." instance=ExtResource("2_bhqi0")]
 

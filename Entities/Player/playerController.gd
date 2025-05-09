@@ -16,6 +16,10 @@ class_name Player
 @onready var inventory_interface: Control = $UI/InventoryInterface
 @onready var hotbar_inventory: PanelContainer = $UI/HotbarInventory
 
+
+
+
+
 @onready var debug_label: Label = $DebugLabel
 
 
@@ -49,6 +53,8 @@ func _ready() -> void:
 	
 	for node in get_tree().get_nodes_in_group("external_inventory"):
 		node.toggle_inventory.connect(toggleInventoryInterface)
+	$TakeDamage.player_damaged.connect(take_damage)
+
 
 	pass
 #Moving and facing with keys and mouse
