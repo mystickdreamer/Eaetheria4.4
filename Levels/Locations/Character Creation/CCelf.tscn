@@ -23,12 +23,12 @@ animations = [{
 
 [node name="Elf" type="AnimatedSprite2D"]
 z_index = -1
-position = Vector2(-100, -79)
 sprite_frames = SubResource("SpriteFrames_dhuea")
 autoplay = "default"
 script = ExtResource("2_jvt03")
 
 [node name="InteractionArea" parent="." instance=ExtResource("1_ekein")]
+action_name = "choose Elf"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("CircleShape2D_qw8tj")

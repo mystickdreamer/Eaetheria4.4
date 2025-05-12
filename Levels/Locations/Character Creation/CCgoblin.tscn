@@ -9,11 +9,11 @@
 
 [node name="Goblin" type="AnimatedSprite2D" groups=["Goblin"]]
 z_index = -1
-position = Vector2(-146, 120)
 sprite_frames = SubResource("SpriteFrames_5fx42")
 script = ExtResource("1_5atr4")
 
 [node name="InteractionArea" parent="." instance=ExtResource("2_lij7g")]
+action_name = "choose Goblin"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("CircleShape2D_sii45")

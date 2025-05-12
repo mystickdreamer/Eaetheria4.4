@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://c24h1kg3gopss" path="res://Levels/Locations/Character Creation/CChalf_orc.tscn" id="14_qa0bq"]
 [ext_resource type="PackedScene" uid="uid://nvuatkhvqknc" path="res://Levels/Locations/Character Creation/CCfellborn.tscn" id="15_dq2tl"]
 [ext_resource type="PackedScene" uid="uid://ckptd142a0ope" path="res://Levels/Locations/Character Creation/CCturtovan.tscn" id="16_26ix0"]
-[ext_resource type="PackedScene" uid="uid://carj8epor35mi" path="res://Levels/Locations/Character Creation/Levels/cc_portal.tscn" id="17_ptn54"]
+[ext_resource type="PackedScene" uid="uid://carj8epor35mi" path="res://Levels/Locations/Character Creation/cc_portal.tscn" id="17_ptn54"]
 [ext_resource type="Script" uid="uid://bh6eq7ycp5t1e" path="res://Levels/Locations/Character Creation/Levels/portal_transition.gd" id="18_lbjph"]
 [ext_resource type="Texture2D" uid="uid://c44a6gy5bmo5m" path="res://Assets/Environment/Props/signs_196.png" id="20_lbjph"]
 [ext_resource type="PackedScene" uid="uid://lw0mi6vqm4er" path="res://Entities/Player/player_spawn.tscn" id="20_vmefa"]
@@ -159,7 +159,7 @@ position = Vector2(-168, -114)
 
 [node name="Halfling" parent="Races" groups=["Halfling"] instance=ExtResource("8_vfq2h")]
 
-[node name="Pixie" parent="Races" groups=["Interactable", "Pixie"] instance=ExtResource("9_6wrjy")]
+[node name="Pixie" parent="Races" groups=["Pixie", "interactable"] instance=ExtResource("9_6wrjy")]
 position = Vector2(-26, -117)
 scale = Vector2(0.5, 0.5)
 

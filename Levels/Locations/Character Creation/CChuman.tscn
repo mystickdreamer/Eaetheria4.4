@@ -44,12 +44,12 @@ animations = [{
 radius = 20.0
 
 [node name="Human" type="AnimatedSprite2D"]
-position = Vector2(-107, -104)
 sprite_frames = SubResource("SpriteFrames_v1k6e")
 autoplay = "default"
 script = ExtResource("2_bia2l")
 
 [node name="InteractionArea" parent="." instance=ExtResource("2_75m0h")]
+action_name = "choose Human"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2(-1, 6)

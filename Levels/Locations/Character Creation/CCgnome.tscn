@@ -9,11 +9,11 @@
 
 [node name="Gnome" type="AnimatedSprite2D" groups=["Gnome"]]
 z_index = -1
-position = Vector2(-204, 95)
 sprite_frames = SubResource("SpriteFrames_tmpvi")
 script = ExtResource("1_c8a3d")
 
 [node name="InteractionArea" parent="." instance=ExtResource("2_ph4tc")]
+action_name = "choose Gnome"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("CircleShape2D_tkv1q")

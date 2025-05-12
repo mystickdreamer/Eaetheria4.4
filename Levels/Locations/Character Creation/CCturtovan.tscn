@@ -9,11 +9,11 @@
 
 [node name="Turtovan" type="AnimatedSprite2D" groups=["Turtovan"]]
 z_index = -1
-position = Vector2(106, 88)
 sprite_frames = SubResource("SpriteFrames_ryftn")
 script = ExtResource("1_eyppu")
 
 [node name="InteractionArea" parent="." instance=ExtResource("2_1q8q4")]
+action_name = "choose Turtovan"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("CircleShape2D_hy7pg")

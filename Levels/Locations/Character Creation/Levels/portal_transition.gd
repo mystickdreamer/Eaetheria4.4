@@ -21,6 +21,7 @@ enum SIDE {LEFT, RIGHT, TOP, BOTTOM}
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 
 
+
 func _ready() -> void:
 	_update_area()
 	if Engine.is_editor_hint():
@@ -89,8 +90,8 @@ func _update_area()->void:
 	if collision_shape == null:
 		collision_shape = get_node("CollisionShape2D")
 		
-	collision_shape.shape.size = new_rect
-	collision_shape.position = new_position
+#	collision_shape.shape.size = new_rect
+#	collision_shape.position = new_position
 
 
 func _on_race_changed():

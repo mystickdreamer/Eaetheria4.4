@@ -10,11 +10,11 @@ radius = 18.0278
 
 [node name="Halfling" type="AnimatedSprite2D"]
 z_index = -1
-position = Vector2(-72, -126)
 sprite_frames = SubResource("SpriteFrames_elvhr")
 script = ExtResource("1_byer4")
 
 [node name="InteractionArea" parent="." instance=ExtResource("1_h53sg")]
+action_name = "choose Halfling"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("CircleShape2D_k0qd8")

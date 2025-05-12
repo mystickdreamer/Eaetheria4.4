@@ -135,7 +135,7 @@ shape = SubResource("RectangleShape2D_tfoi8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_q6uob")
+&"": SubResource("AnimationLibrary_q6uob")
 }
 
 [node name="ContainerUI" parent="." instance=ExtResource("5_pud8x")]

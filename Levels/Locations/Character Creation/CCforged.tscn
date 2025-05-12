@@ -9,11 +9,11 @@
 
 [node name="Forged" type="AnimatedSprite2D" groups=["Forged"]]
 z_index = -1
-position = Vector2(70, -117)
 sprite_frames = SubResource("SpriteFrames_t6uie")
 script = ExtResource("1_ovw6v")
 
 [node name="InteractionArea" parent="." instance=ExtResource("2_i14w7")]
+action_name = "choose Forged"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("CircleShape2D_khdns")

@@ -1,11 +1,18 @@
-[gd_scene load_steps=10 format=4 uid="uid://yt1c7prpj08a"]
+[gd_scene load_steps=19 format=4 uid="uid://yt1c7prpj08a"]
 
 [ext_resource type="Script" uid="uid://6mywanism82s" path="res://Levels/Locations/Character Creation/Levels/level.gd" id="1_p5rd3"]
 [ext_resource type="TileSet" uid="uid://bjrqmdci0qd7b" path="res://Levels/OverWorld/Verdania/OverworldGroundTiles.tres" id="1_wiqv7"]
 [ext_resource type="TileSet" uid="uid://ch6r13uqhwu4o" path="res://Levels/OverWorld/Verdania/OverworldGroundEdges.tres" id="2_7xxsv"]
-[ext_resource type="Texture2D" uid="uid://bld8am4wyuo5f" path="res://Assets/TileMapLayers/Internal/SuperRetro/atlas_32x.png" id="4_igx28"]
-[ext_resource type="PackedScene" uid="uid://carj8epor35mi" path="res://Levels/Locations/Character Creation/Levels/cc_portal.tscn" id="4_p5rd3"]
+[ext_resource type="Texture2D" uid="uid://bld8am4wyuo5f" path="res://Assets/TileMapLayers/Internal/atlas_32x.png" id="4_igx28"]
+[ext_resource type="PackedScene" uid="uid://carj8epor35mi" path="res://Levels/Locations/Character Creation/cc_portal.tscn" id="4_p5rd3"]
 [ext_resource type="Script" uid="uid://bh6eq7ycp5t1e" path="res://Levels/Locations/Character Creation/Levels/portal_transition.gd" id="6_igx28"]
+[ext_resource type="Texture2D" uid="uid://enmxlp7xeen7" path="res://Assets/#1 - Transparent Icons.png" id="7_50ik1"]
+[ext_resource type="PackedScene" uid="uid://d2grvomkgoqy6" path="res://Entities/Monsters/NPCs/npc.tscn" id="7_p5rd3"]
+[ext_resource type="Resource" uid="uid://cs5uhqmrt7b2k" path="res://Entities/Monsters/NPCs/NPCResourcefiles/CCArcher.tres" id="8_dy3kw"]
+[ext_resource type="PackedScene" uid="uid://byooi5qtnotfi" path="res://Entities/Interactions/Dialog/dialog_interaction.tscn" id="9_n7348"]
+[ext_resource type="Script" uid="uid://dp3vqxkgw3lym" path="res://Entities/Interactions/Dialog/Scripts/dialog_text.gd" id="10_1kb3y"]
+[ext_resource type="Script" uid="uid://2qan2ymtjuxx" path="res://Entities/Interactions/Dialog/Scripts/dialog_choice.gd" id="10_ognvn"]
+[ext_resource type="Script" uid="uid://l0dpvjn22dtg" path="res://Entities/Interactions/Dialog/Scripts/dialog_branch.gd" id="11_h8cnw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p5rd3"]
 texture = ExtResource("4_igx28")
@@ -773,6 +780,14 @@ physics_layer_0/collision_layer = 17
 physics_layer_0/collision_mask = 16
 sources/2 = SubResource("TileSetAtlasSource_p5rd3")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kb3y"]
+atlas = ExtResource("7_50ik1")
+region = Rect2(96, 192, 32, 32)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n7348"]
+radius = 31.0
+height = 90.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7xxsv"]
 
 [node name="ChooseBackground" type="Node2D"]
@@ -793,6 +808,76 @@ tile_set = ExtResource("2_7xxsv")
 [node name="Floor_Walls" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD3////AgAGAAkAAAD3/wAAAgAGAAkAAAD3//7/AgAGAAkAAAD4//7/AgAGAAkAAAD4////AgAGAAkAAAD4/wAAAgAGAAkAAAD5/wAAAgAGAAkAAAD5////AgAGAAkAAAD5//7/AgAGAAkAAAD6//7/AgAGAAkAAAD6////AgAGAAkAAAD6/wAAAgAGAAkAAAD7/wAAAgAGAAkAAAD7////AgAGAAkAAAD7//7/AgAGAAkAAAD8//7/AgAGAAkAAAD8////AgAGAAkAAAD8/wAAAgAGAAkAAAD9/wAAAgAGAAkAAAD9////AgAGAAkAAAD9//7/AgAGAAkAAAD+//7/AgAGAAkAAAD+////AgAGAAkAAAD+/wAAAgAGAAkAAAD//wAAAgAGAAkAAAD/////AgAGAAkAAAD///7/AgAGAAkAAAAAAP7/AgAGAAkAAAAAAP//AgAGAAkAAAAAAAAAAgAGAAkAAAABAAAAAgAGAAkAAAABAP//AgAGAAkAAAABAP7/AgAGAAkAAAACAP7/AgAGAAkAAAACAP//AgAGAAkAAAACAAAAAgAGAAkAAAADAAAAAgAGAAkAAAADAP//AgAGAAkAAAADAP7/AgAGAAkAAAAEAP7/AgAGAAkAAAAEAP//AgAGAAkAAAAEAAAAAgAGAAkAAAAFAAAAAgAGAAkAAAAFAP//AgAGAAkAAAAFAP7/AgAGAAkAAAD2//7/AgAAAA0AAAD2////AgAAAA0AAAD2/wAAAgAAAA0AAAD3//3/AgAGAAkAAAD4//3/AgAGAAkAAAD5//3/AgAGAAkAAAD6//3/AgAGAAkAAAD7//3/AgAGAAkAAAD8//3/AgAGAAkAAAD9//3/AgAGAAkAAAD+//3/AgAGAAkAAAD///3/AgAGAAkAAAAAAP3/AgAGAAkAAAABAP3/AgAGAAkAAAACAP3/AgAGAAkAAAADAP3/AgAGAAkAAAAEAP3/AgAGAAkAAAAFAP3/AgAGAAkAAAD3/wEAAgAGAAkAAAD4/wEAAgAGAAkAAAD5/wEAAgAGAAkAAAD6/wEAAgAGAAkAAAD7/wEAAgAGAAkAAAD8/wEAAgAGAAkAAAD9/wEAAgAGAAkAAAD+/wEAAgAGAAkAAAD//wEAAgAGAAkAAAAAAAEAAgAGAAkAAAABAAEAAgAGAAkAAAACAAEAAgAGAAkAAAADAAEAAgAGAAkAAAAEAAEAAgAGAAkAAAAFAAEAAgAGAAkAAAD3//z/AgAGAAkAAAD4//z/AgAGAAkAAAD5//z/AgAGAAkAAAD6//z/AgAGAAkAAAD7//z/AgAGAAkAAAD8//z/AgAGAAkAAAD9//z/AgAGAAkAAAD+//z/AgAGAAkAAAD///z/AgAGAAkAAAAAAPz/AgAGAAkAAAABAPz/AgAGAAkAAAACAPz/AgAGAAkAAAADAPz/AgAGAAkAAAAEAPz/AgAGAAkAAAAFAPz/AgAGAAkAAAD3/wIAAgAGAAkAAAD4/wIAAgAGAAkAAAD5/wIAAgAGAAkAAAD6/wIAAgAGAAkAAAD7/wIAAgAGAAkAAAD8/wIAAgAGAAkAAAD9/wIAAgAGAAkAAAD+/wIAAgAGAAkAAAD//wIAAgAGAAkAAAAAAAIAAgAGAAkAAAABAAIAAgAGAAkAAAACAAIAAgAGAAkAAAADAAIAAgAGAAkAAAAEAAIAAgAGAAkAAAAFAAIAAgAGAAkAAAD2/wEAAgAAAA0AAAD2/wIAAgAAAA0AAAD2//z/AgAAAA0AAAD2//3/AgAAAA0AAAAGAPz/AgAEAA0AAAAGAP3/AgAEAA0AAAAGAP7/AgAEAA0AAAAGAP//AgAEAA0AAAAGAAAAAgAEAA0AAAAGAAEAAgAEAA0AAAAGAAIAAgAEAA0AAAD3/wMAAgACAA8AAAD4/wMAAgACAA8AAAD5/wMAAgACAA8AAAD6/wMAAgACAA8AAAD7/wMAAgACAA8AAAD8/wMAAgACAA8AAAD9/wMAAgACAA8AAAD+/wMAAgACAA8AAAD//wMAAgACAA8AAAAAAAMAAgACAA8AAAABAAMAAgACAA8AAAACAAMAAgACAA8AAAADAAMAAgACAA8AAAAEAAMAAgACAA8AAAAFAAMAAgACAA8AAAAGAAMAAgADAA8AAAD2/wMAAgABAA8AAAD3//r/AgAAAAIAAAD3//v/AgAAAAMAAAD4//r/AgAAAAIAAAD4//v/AgAAAAMAAAD5//r/AgAAAAIAAAD5//v/AgAAAAMAAAD6//r/AgAAAAIAAAD6//v/AgAAAAMAAAD7//r/AgAAAAIAAAD7//v/AgAAAAMAAAD8//r/AgAAAAIAAAD8//v/AgAAAAMAAAD9//r/AgAAAAIAAAD9//v/AgAAAAMAAAD+//r/AgAAAAIAAAD+//v/AgAAAAMAAAD///r/AgAAAAIAAAD///v/AgAAAAMAAAAAAPr/AgAAAAIAAAAAAPv/AgAAAAMAAAABAPr/AgAAAAIAAAABAPv/AgAAAAMAAAACAPr/AgAAAAIAAAACAPv/AgAAAAMAAAADAPr/AgAAAAIAAAADAPv/AgAAAAMAAAAEAPr/AgAAAAIAAAAEAPv/AgAAAAMAAAAFAPr/AgAAAAIAAAAFAPv/AgAAAAMAAAD2//v/AgAAAA0AAAD2//r/AgAAAA0AAAAGAPv/AgAEAA0AAAAGAPr/AgAEAA0AAAA=")
 tile_set = SubResource("TileSet_dy3kw")
+
+[node name="Archer" parent="." instance=ExtResource("7_p5rd3")]
+position = Vector2(-195, -87)
+npc_resource = ExtResource("8_dy3kw")
+char_name = "Archer"
+animal = 0
+aquam = 0
+auram = 0
+corpus = 0
+herbam = 0
+ignem = 0
+imaginem = 0
+mentem = 0
+terram = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Archer"]
+show_behind_parent = true
+position = Vector2(-6, -22)
+rotation = 2.61773
+texture = SubResource("AtlasTexture_1kb3y")
+
+[node name="DialogInteraction" parent="Archer" instance=ExtResource("9_n7348")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Archer/DialogInteraction"]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_n7348")
+debug_color = Color(0.533167, 0.569459, 0.054255, 0.42)
+
+[node name="DialogText" type="Node" parent="Archer/DialogInteraction"]
+script = ExtResource("10_1kb3y")
+text = "Hail and well met, new traveler."
+npc_info = ExtResource("8_dy3kw")
+metadata/_custom_type_script = "uid://dp3vqxkgw3lym"
+
+[node name="DialogText2" type="Node" parent="Archer/DialogInteraction"]
+script = ExtResource("10_1kb3y")
+text = "Embrace the way of the archer, and let your arrows fly true! Will you accept this path?
+
+"
+npc_info = ExtResource("8_dy3kw")
+metadata/_custom_type_script = "uid://dp3vqxkgw3lym"
+
+[node name="DialogChoice" type="Node" parent="Archer/DialogInteraction"]
+script = ExtResource("10_ognvn")
+npc_info = ExtResource("8_dy3kw")
+metadata/_custom_type_script = "uid://2qan2ymtjuxx"
+
+[node name="DialogBranch" type="Node" parent="Archer/DialogInteraction/DialogChoice"]
+script = ExtResource("11_h8cnw")
+text = "Yes..."
+npc_info = ExtResource("8_dy3kw")
+metadata/_custom_type_script = "uid://l0dpvjn22dtg"
+
+[node name="DialogText" type="Node" parent="Archer/DialogInteraction/DialogChoice/DialogBranch"]
+script = ExtResource("10_1kb3y")
+text = "Great! Let me teach you the ways of the archer."
+npc_info = ExtResource("8_dy3kw")
+metadata/_custom_type_script = "uid://dp3vqxkgw3lym"
+
+[node name="DialogBranch2" type="Node" parent="Archer/DialogInteraction/DialogChoice"]
+script = ExtResource("11_h8cnw")
+text = "No..."
+npc_info = ExtResource("8_dy3kw")
+metadata/_custom_type_script = "uid://l0dpvjn22dtg"
+
+[node name="DialogText" type="Node" parent="Archer/DialogInteraction/DialogChoice/DialogBranch2"]
+script = ExtResource("10_1kb3y")
+text = "If that is your choice. Find your calling with somebody else."
+npc_info = ExtResource("8_dy3kw")
+metadata/_custom_type_script = "uid://dp3vqxkgw3lym"
 
 [node name="CCPortal" parent="." instance=ExtResource("4_p5rd3")]
 position = Vector2(-264, -17)

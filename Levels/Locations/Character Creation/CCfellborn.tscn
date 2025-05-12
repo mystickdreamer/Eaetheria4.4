@@ -9,11 +9,11 @@
 
 [node name="Fellborn" type="AnimatedSprite2D" groups=["Fellborn"]]
 z_index = -1
-position = Vector2(34, 79)
 sprite_frames = SubResource("SpriteFrames_i8vgs")
 script = ExtResource("1_t7xt2")
 
 [node name="InteractionArea" parent="." instance=ExtResource("2_8ypla")]
+action_name = "choose Fellborn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("CircleShape2D_0q2jk")

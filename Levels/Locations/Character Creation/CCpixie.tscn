@@ -74,12 +74,12 @@ height = 52.0
 
 [node name="Pixie" type="AnimatedSprite2D"]
 z_index = -1
-position = Vector2(37, -98)
 sprite_frames = SubResource("SpriteFrames_vy37i")
 autoplay = "default"
 script = ExtResource("2_nlltq")
 
 [node name="InteractionArea" parent="." instance=ExtResource("2_v24gw")]
+action_name = "choose Pixie"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2(-1, 7)

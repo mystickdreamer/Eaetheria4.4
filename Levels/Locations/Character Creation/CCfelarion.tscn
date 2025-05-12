@@ -9,11 +9,11 @@
 
 [node name="Felarion" type="AnimatedSprite2D" groups=["Felarion"]]
 z_index = -1
-position = Vector2(17, -138)
 sprite_frames = SubResource("SpriteFrames_heosn")
 script = ExtResource("1_7unqf")
 
 [node name="InteractionArea" parent="." instance=ExtResource("2_m3mus")]
+action_name = "choose Felarion"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("CircleShape2D_quor3")
