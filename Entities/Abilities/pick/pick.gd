@@ -1,6 +1,6 @@
 extends Node
 
-var distance = 0
+var distance = 1
 var speed = 200
 var cooldown = 2
 

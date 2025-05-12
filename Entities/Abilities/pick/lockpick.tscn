@@ -1,10 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0qrxiv41i50b"]
+[gd_scene load_steps=4 format=3 uid="uid://d0qrxiv41i50b"]
 
+[ext_resource type="Script" uid="uid://c32gdjb1se70" path="res://Entities/Abilities/pick/lockpick.gd" id="1_dff88"]
 [ext_resource type="Texture2D" uid="uid://5x14hky66gk1" path="res://Entities/Objects/Items/itemAtlas.tres" id="1_mo4qi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sf5db"]
 
 [node name="Lockpick" type="CharacterBody2D"]
+script = ExtResource("1_dff88")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_sf5db")
