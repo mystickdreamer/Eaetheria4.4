@@ -15,5 +15,15 @@ class_name NPCResource
 @export var left_wing_sprite: Texture
 @export var right_wing_sprite: Texture
 
+@export var body_modulate: Color = Color.WHITE
+@export var mouth_modulate: Color = Color.WHITE
+@export var head_modulate: Color = Color.WHITE
+@export var eyes_modulate: Color = Color.WHITE
+@export var hair_modulate: Color = Color.WHITE
+@export var foot_modulate: Color = Color.WHITE
+@export var hand_modulate: Color = Color.WHITE
+@export var wing_modulate: Color = Color.WHITE
+
+
 @export var portrait: Texture
-@export var dialog_audio_pitch: String
+@export_range(0.5, 1.8,0.02) var dialog_audio_pitch: float = 1.0

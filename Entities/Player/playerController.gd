@@ -16,6 +16,7 @@ class_name Player
 @onready var inventory_interface: Control = $UI/InventoryInterface
 @onready var hotbar_inventory: PanelContainer = $UI/HotbarInventory
 
+@onready var message_label: Label = $UI/MessageLabel
 
 
 
@@ -53,7 +54,7 @@ func _ready() -> void:
 	
 	for node in get_tree().get_nodes_in_group("external_inventory"):
 		node.toggle_inventory.connect(toggleInventoryInterface)
-	$TakeDamage.player_damaged.connect(take_damage)
+#	$TakeDamage.player_damaged.connect(take_damage)
 
 
 	pass
@@ -84,15 +85,15 @@ func actionInput():
 		if Input.is_action_pressed("attack"):
 			useAbility("attack")
 			lastAbility = 20
-		if Input.is_action_pressed("interact"):
-			interact()
-			lastAbility = 3
+#		if Input.is_action_pressed("interact"):
+#			interact()
+#			lastAbility = 3
 		if Input.is_action_pressed("sneak"):
 			useAbility("sneak")
 			lastAbility = 3
-		if Input.is_action_pressed("test"):
-			wet_timer = 10
-			is_wet = true
+#		if Input.is_action_pressed("test"):
+#			wet_timer = 10
+#			is_wet = true
 			#learnAbility("blink")
 			#print("Blink loaded")
 #		if Input.is_action_pressed("test2"):
@@ -102,15 +103,20 @@ func actionInput():
 		stats_printed = false
 		print_stats()
 	pass
-func interact():
-	var c = getCollisions()
-	if c:
-		if c.get_groups()[0] == "interactable": c.interact()
+	
+	#####Leaving this in for now just in case, but it looks like I don't need it
+#func interact():
+#	var c = getCollisions()
+#	if c:
+#		if c.get_groups()[0] == "interactable": c.interact()
 
-func getCollisions():
-	var c = get_last_slide_collision()
-	if ( c && c.get_collider()): return c.get_collider()
-	debug_label.text += "\nCollider:" + str(c.get_collider())
+#func getCollisions():
+#	var c = get_last_slide_collision()
+#	if ( c && c.get_collider()): return c.get_collider()
+#	debug_label.text += "\nCollider:" + str(c.get_collider())
+
+#####################################################################
+	
 func updateSpriteBasedOnMouse():
 	var mousePosition = get_global_mouse_position()
 	var direction = (mousePosition - global_position).normalized()

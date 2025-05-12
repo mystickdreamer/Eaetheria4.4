@@ -1602,6 +1602,7 @@ ring_inventory = SubResource("Resource_dxfd4")
 ring2_inventory = SubResource("Resource_22e1q")
 weapon_inventory = SubResource("Resource_oqi6a")
 race = ExtResource("12_4sr44")
+mana = 10.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gnn0d")
@@ -1620,7 +1621,7 @@ libraries = {
 autoplay = "Human_idle_Down"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
+zoom = Vector2(3, 3)
 
 [node name="DebugLabel" type="Label" parent="."]
 offset_left = -185.0

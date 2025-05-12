@@ -113,24 +113,16 @@ var perdo_xp: float = 0.00
 var rego_xp: float = 0.00
 
 #Nounage
-@export var animal: int = 0
-var animal_xp: float = 0.00
-@export var aquam: int = 0
-var aquam_xp: float = 0.00
-@export var auram: int = 0
-var auram_xp: float = 0.00
-@export var corpus: int = 0
-var corpus_xp: float = 0.00
-@export var herbam: int = 0
-var herbam_xp: float = 0.00
-@export var ignem: int = 0
-var ignem_xp: float = 0.00
-@export var imaginem: int = 0
-var imaginem_xp: float = 0.00
-@export var mentem: int = 0
-var mentem_xp: float = 0.00
-@export var terram: int = 0
-var terram_xp: float = 0.00
+@export var animal: bool = false
+@export var aquam: bool = false
+@export var auram: bool = false
+@export var corpus: bool = false
+@export var herbam: bool = false
+@export var ignem: bool = false
+@export var imaginem: bool = false
+@export var mentem: bool = false
+@export var terram: bool = false
+
 @export var magicka: int = 0
 var magicka_xp: float = 0.00
 
@@ -485,6 +477,9 @@ func attempt_increase(name: String, value: int, multi: int) -> bool:
 var skill_nameXP: String = ""
 var skill_success_xp: float = 0.0
 
+#Do I want them to need to find a teacher to level up things?
+
+
 func add_xp()->void:
 	var xp_variable = skill_nameXP + "_xp"
 	print(xp_variable)
@@ -544,7 +539,6 @@ func print_stats()->void:
 		print("rego rank: ", rego)
 		print("rego xp ", rego_xp)
 		print("corpus rank: ", corpus)
-		print("corpus xp ", corpus_xp)
 		print("1Handxp: ",oneHand_xp)
 		print("agility xp: ", agility_xp)
 		print(weapon_skill_name)
