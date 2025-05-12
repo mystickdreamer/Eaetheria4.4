@@ -180,7 +180,7 @@ func changeSprite(direction: Vector2)->void:
 #		if animation_player.animation != walkAnimation:
 		animation_player.play(walkAnimation)
 	else:
-		var idleAnimation = "idle" + facingDirection
+		var idleAnimation = "idle_" + "side"
 #		var idleAnimation = raceAnim+"_idle_"+facingDirection
 		
 #		if animation_player.animation != idleAnimation:
