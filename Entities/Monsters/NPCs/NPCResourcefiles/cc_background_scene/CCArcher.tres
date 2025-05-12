@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=12 format=3 uid="uid://cs5uhqmrt7b2k"]
+
+[ext_resource type="Texture2D" uid="uid://cp3p5oxva3o5h" path="res://Assets/Characters/BodyParts/Bodies/Body 1/body_1_atlas.png" id="1_kdbsd"]
+[ext_resource type="Texture2D" uid="uid://k5rttdgbe1fn" path="res://Assets/Characters/BodyParts/Eyes/Eyes4/eye_4_atlas.png" id="2_ggb6n"]
+[ext_resource type="Texture2D" uid="uid://cqkytniha40eu" path="res://Assets/Characters/BodyParts/Hairs/Hair 1/hair_1_atlas.png" id="3_bk8cw"]
+[ext_resource type="Texture2D" uid="uid://173qdjb0nvgf" path="res://Assets/Characters/BodyParts/Heads/Head 1/head_1_atlas.png" id="4_a1yv5"]
+[ext_resource type="Texture2D" uid="uid://kkw7t2i3n82k" path="res://Assets/Characters/BodyParts/Left/Feet/left_foot_1_atlas.png" id="5_hih2s"]
+[ext_resource type="Texture2D" uid="uid://dnvgkobqyj8b0" path="res://Assets/Characters/BodyParts/Left/Hands/left_hand_1_atlas.png" id="6_lst48"]
+[ext_resource type="Texture2D" uid="uid://cndsfie8tnin4" path="res://Assets/Characters/BodyParts/Mouth/Mouth 1/mouth_1_atlas.png" id="7_c261a"]
+[ext_resource type="Texture2D" uid="uid://ipqd5tspkpmx" path="res://Assets/Characters/portraits/ArcherPortrait.png" id="8_go4nt"]
+[ext_resource type="Texture2D" uid="uid://b5h8bcgesgg11" path="res://Assets/Characters/BodyParts/Right/Feet/right_foot_1_atlas.png" id="9_i5q1w"]
+[ext_resource type="Texture2D" uid="uid://bg17hdku6b6p1" path="res://Assets/Characters/BodyParts/Right/Hands/right_hand_1_atlas.png" id="10_dtpgk"]
+[ext_resource type="Script" uid="uid://b627pocwa4b4c" path="res://Entities/Monsters/NPCs/scripts/npc_resource.gd" id="11_8vfia"]
+
+[resource]
+script = ExtResource("11_8vfia")
+npc_name = "Archer"
+npc_class = "archer"
+body_sprite = ExtResource("1_kdbsd")
+mouth_sprite = ExtResource("7_c261a")
+head_sprite = ExtResource("4_a1yv5")
+eyes_sprite = ExtResource("2_ggb6n")
+hair_sprite = ExtResource("3_bk8cw")
+left_foot_sprite = ExtResource("5_hih2s")
+right_foot_sprite = ExtResource("9_i5q1w")
+left_hand_sprite = ExtResource("6_lst48")
+right_hand_sprite = ExtResource("10_dtpgk")
+body_modulate = Color(0.312569, 0.18945, 0.11275, 1)
+mouth_modulate = Color(1, 1, 1, 1)
+head_modulate = Color(0.729427, 0.481801, 0.345071, 1)
+eyes_modulate = Color(1, 1, 1, 1)
+hair_modulate = Color(0.102512, 0.405077, 0.211391, 1)
+foot_modulate = Color(0.546512, 0.374284, 0.205437, 1)
+hand_modulate = Color(0.442877, 0.264868, 0.142903, 1)
+wing_modulate = Color(1, 1, 1, 1)
+teeth_modulate = Color(1, 1, 1, 1)
+ears_modulate = Color(1, 1, 1, 1)
+tail_modulate = Color(1, 1, 1, 1)
+portrait = ExtResource("8_go4nt")
+dialog_audio_pitch = 0.6
+metadata/_custom_type_script = "uid://b627pocwa4b4c"

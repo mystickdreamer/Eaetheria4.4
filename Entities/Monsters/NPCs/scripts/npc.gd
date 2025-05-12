@@ -24,6 +24,8 @@ var do_behavior_enabled: bool = true
 @onready var right_foot: Sprite2D = $right_foot
 @onready var left_hand: Sprite2D = $left_hand
 @onready var right_hand: Sprite2D = $right_hand
+@onready var ears: Sprite2D = $ears
+@onready var tail: Sprite2D = $tail
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
@@ -59,6 +61,8 @@ func update_direction(target_position: Vector2)->void:
 		mouth.flip_h = true
 		eyes.flip_h = true
 		hair.flip_h = true
+		ears.flip_h = true
+		tail.flip_h = true
 	else:
 		left_wing.flip_h = false
 		right_wing.flip_h = false
@@ -71,6 +75,8 @@ func update_direction(target_position: Vector2)->void:
 		mouth.flip_h = false
 		eyes.flip_h = false
 		hair.flip_h = false
+		ears.flip_h = false
+		tail. flip_h = false
 	
 #func update_direction_name()->void:
 #	var threshold : float = 0.45

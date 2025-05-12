@@ -733,15 +733,6 @@ max_mana = 0.0
 stamina = 0
 max_stamina = 0
 maxWeight = 0
-animal = 0
-aquam = 0
-auram = 0
-corpus = 0
-herbam = 0
-ignem = 0
-imaginem = 0
-mentem = 0
-terram = 0
 monster_difficulty = 0
 xpPool = 0
 visibility_range = 0
@@ -822,6 +813,12 @@ scale = Vector2(0.05, 0.05)
 texture = ExtResource("12_nu5qg")
 hframes = 6
 vframes = 7
+
+[node name="teeth" type="Sprite2D" parent="."]
+
+[node name="ears" type="Sprite2D" parent="."]
+
+[node name="tail" type="Sprite2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
