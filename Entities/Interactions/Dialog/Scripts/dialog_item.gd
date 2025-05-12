@@ -5,7 +5,7 @@ class_name DialogItem
 
 @export var npc_info: NPCResource
 
-var editor_selection :EditorSelection
+var editor_selection #removed to avoid runtime bug :EditorSelection
 var example_dialog: DialogSystemNode
 
 
@@ -13,7 +13,8 @@ var example_dialog: DialogSystemNode
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
-		editor_selection = EditorInterface.get_selection()
+		#editor_selection = EditorInterface.get_selection()
+		editor_selection = Engine.get_singleton("EditorInterface").get_selection()
 		editor_selection.selection_changed.connect(_on_selection_changed)
 		return
 		

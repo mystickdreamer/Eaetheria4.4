@@ -5,6 +5,8 @@ class_name DialogBranch
 
 @export var text: String = "ok..." :set = _set_text
 
+signal selected
+
 var dialog_items: Array[DialogItem]
 
 

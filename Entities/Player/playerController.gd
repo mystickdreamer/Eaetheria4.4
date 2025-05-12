@@ -18,6 +18,20 @@ class_name Player
 
 @onready var message_label: Label = $UI/MessageLabel
 
+@onready var left_wing: Sprite2D = $left_wing
+@onready var right_wing: Sprite2D = $right_wing
+@onready var body: Sprite2D = $body
+@onready var head: Sprite2D = $head
+@onready var mouth: Sprite2D = $mouth
+@onready var eyes: Sprite2D = $eyes
+@onready var hair: Sprite2D = $hair
+@onready var left_foot: Sprite2D = $left_foot
+@onready var right_foot: Sprite2D = $right_foot
+@onready var left_hand: Sprite2D = $left_hand
+@onready var right_hand: Sprite2D = $right_hand
+@onready var teeth: Sprite2D = $teeth
+@onready var ears: Sprite2D = $ears
+@onready var tail: Sprite2D = $tail
 
 
 
@@ -99,7 +113,7 @@ func actionInput():
 #		if Input.is_action_pressed("test2"):
 #			useAbility("blink")
 #			lastAbility = 0
-	if Input.is_action_pressed("testStats"):
+	if Input.is_action_pressed("test"):
 		stats_printed = false
 		print_stats()
 	pass
@@ -124,19 +138,50 @@ func updateSpriteBasedOnMouse():
 	changeSprite(direction)
 	pass	
 func changeSprite(direction: Vector2)->void:
-	var raceAnim = PlayerManager.player.race.race_name
+#	var raceAnim = PlayerManager.player.race.race_name
 	var facingDirection = ""
 	if abs(direction.x) > abs(direction.y):
 		facingDirection = "Right" if direction.x > 0 else "Left"
 	else:
 		facingDirection = "Down" if direction.y > 0 else "Up"
 			
+	if facingDirection == "Left":
+		left_wing.flip_h = true
+		right_wing.flip_h = true
+		right_hand.flip_h = true
+		left_hand.flip_h = true
+		right_foot.flip_h = true
+		left_foot.flip_h = true
+		body.flip_h = true
+		head.flip_h = true
+		mouth.flip_h = true
+		eyes.flip_h = true
+		hair.flip_h = true
+		ears.flip_h = true
+		tail.flip_h = true
+	else:
+		left_wing.flip_h = false
+		right_wing.flip_h = false
+		right_hand.flip_h = false
+		left_hand.flip_h = false
+		right_foot.flip_h = false
+		left_foot.flip_h = false
+		body.flip_h = false
+		head.flip_h = false
+		mouth.flip_h = false
+		eyes.flip_h = false
+		hair.flip_h = false
+		ears.flip_h = false
+		tail. flip_h = false
+		pass
 	if isMoving:
-		var walkAnimation = raceAnim+"_walk_"+facingDirection
+#		var walkAnimation = raceAnim+"_walk_"+facingDirection
+		var walkAnimation = "walk_" + "side"
 #		if animation_player.animation != walkAnimation:
 		animation_player.play(walkAnimation)
 	else:
-		var idleAnimation = raceAnim+"_idle_"+facingDirection
+		var idleAnimation = "idle" + facingDirection
+#		var idleAnimation = raceAnim+"_idle_"+facingDirection
 		
 #		if animation_player.animation != idleAnimation:
 		animation_player.play(idleAnimation)

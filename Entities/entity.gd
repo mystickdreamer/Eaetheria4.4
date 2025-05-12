@@ -527,11 +527,7 @@ func print_stats()->void:
 		print("Player Stats:")
 		if debug_label:
 			debug_label.text += "Player Stats:"
-			debug_label.text += "\nskill1: " + str(skill1)
-			debug_label.text += "\nskillstat: " + str(skill_stat)
-			debug_label.text += "\n1hand: " + str(oneHand)
-			debug_label.text += "\n1handXP: " + str(oneHand_xp)
-			debug_label.text += "\nwepDamTest: " + str(attack_skill2)
+			debug_label.text += "\narchery: " + str(archery)
 		print("Visibility Range: ", visibility_range)
 		print("Intelligence bonus: ", intelligence_bonus)
 		print("Mana Bonus: ", mana_bonus)
