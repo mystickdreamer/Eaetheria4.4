@@ -1,0 +1,61 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://gf632pfjckjg"]
+
+[ext_resource type="FontFile" uid="uid://dfha45aac6jd2" path="res://Assets/Fronts/Abaddon Light.ttf" id="1_ae4gy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n1ro8"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.12639, 0.300476, 0.139601, 0.696)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ae4gy"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.12639, 0.300476, 0.139601, 0.696)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xjfhl"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.172833, 0.172833, 0.172833, 0.873)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m7uvi"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+anti_aliasing = false
+
+[resource]
+Button/colors/font_color = Color(0.894118, 0.862745, 0.796078, 1)
+Button/font_sizes/font_size = 25
+Button/fonts/font = ExtResource("1_ae4gy")
+Button/styles/focus = SubResource("StyleBoxFlat_n1ro8")
+Button/styles/hover = SubResource("StyleBoxFlat_ae4gy")
+Button/styles/normal = SubResource("StyleBoxFlat_xjfhl")
+Button/styles/pressed = SubResource("StyleBoxFlat_m7uvi")
+VBoxContainer/constants/separation = 6
