@@ -1,0 +1,947 @@
+[gd_scene load_steps=21 format=4 uid="uid://yt1c7prpj08a"]
+
+[ext_resource type="Script" uid="uid://6mywanism82s" path="res://Levels/Locations/Character Creation/Levels/level.gd" id="1_yi7os"]
+[ext_resource type="TileSet" uid="uid://bjrqmdci0qd7b" path="res://Levels/OverWorld/Verdania/OverworldGroundTiles.tres" id="2_5riq8"]
+[ext_resource type="TileSet" uid="uid://ch6r13uqhwu4o" path="res://Levels/OverWorld/Verdania/OverworldGroundEdges.tres" id="3_8ug8l"]
+[ext_resource type="Texture2D" uid="uid://bld8am4wyuo5f" path="res://Assets/TileMapLayers/Internal/atlas_32x.png" id="4_sw342"]
+[ext_resource type="PackedScene" uid="uid://d2grvomkgoqy6" path="res://Entities/Monsters/NPCs/npc.tscn" id="5_ihrii"]
+[ext_resource type="Resource" uid="uid://cs5uhqmrt7b2k" path="res://Entities/Monsters/NPCs/NPCResourcefiles/cc_background_scene/CCArcher.tres" id="6_rpryw"]
+[ext_resource type="Texture2D" uid="uid://enmxlp7xeen7" path="res://Assets/#1 - Transparent Icons.png" id="7_di4fi"]
+[ext_resource type="PackedScene" uid="uid://byooi5qtnotfi" path="res://Entities/Interactions/Dialog/dialog_interaction.tscn" id="8_360ig"]
+[ext_resource type="Script" uid="uid://dp3vqxkgw3lym" path="res://Entities/Interactions/Dialog/Scripts/dialog_text.gd" id="9_1khvj"]
+[ext_resource type="Script" uid="uid://2qan2ymtjuxx" path="res://Entities/Interactions/Dialog/Scripts/dialog_choice.gd" id="10_x6kcp"]
+[ext_resource type="Script" uid="uid://l0dpvjn22dtg" path="res://Entities/Interactions/Dialog/Scripts/dialog_branch.gd" id="11_5yp71"]
+[ext_resource type="PackedScene" uid="uid://b65h1q0e3bymd" path="res://Levels/Locations/Character Creation/Levels/background/background_skills.tscn" id="12_0is4l"]
+[ext_resource type="PackedScene" uid="uid://carj8epor35mi" path="res://Levels/Locations/Character Creation/cc_portal.tscn" id="13_5cdot"]
+[ext_resource type="Script" uid="uid://bh6eq7ycp5t1e" path="res://Levels/Locations/Character Creation/Levels/portal_transition.gd" id="14_fiujf"]
+[ext_resource type="Resource" uid="uid://ckjjsk5lw58ug" path="res://Entities/Monsters/NPCs/NPCResourcefiles/cc_background_scene/CCfighter.tres" id="15_5riq8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p5rd3"]
+texture = ExtResource("4_sw342")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+23:0/0 = 0
+24:0/0 = 0
+25:0/0 = 0
+27:0/0 = 0
+28:0/0 = 0
+29:0/0 = 0
+30:0/0 = 0
+32:0/0 = 0
+33:0/0 = 0
+34:0/0 = 0
+35:0/0 = 0
+36:0/0 = 0
+37:0/0 = 0
+38:0/0 = 0
+39:0/0 = 0
+40:0/0 = 0
+41:0/0 = 0
+42:0/0 = 0
+43:0/0 = 0
+44:0/0 = 0
+45:0/0 = 0
+46:0/0 = 0
+47:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+21:1/0 = 0
+22:1/0 = 0
+23:1/0 = 0
+24:1/0 = 0
+25:1/0 = 0
+26:1/0 = 0
+27:1/0 = 0
+28:1/0 = 0
+29:1/0 = 0
+30:1/0 = 0
+31:1/0 = 0
+32:1/0 = 0
+33:1/0 = 0
+34:1/0 = 0
+35:1/0 = 0
+36:1/0 = 0
+37:1/0 = 0
+38:1/0 = 0
+39:1/0 = 0
+40:1/0 = 0
+41:1/0 = 0
+42:1/0 = 0
+43:1/0 = 0
+44:1/0 = 0
+45:1/0 = 0
+46:1/0 = 0
+47:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+21:2/0 = 0
+22:2/0 = 0
+23:2/0 = 0
+24:2/0 = 0
+25:2/0 = 0
+26:2/0 = 0
+27:2/0 = 0
+28:2/0 = 0
+29:2/0 = 0
+30:2/0 = 0
+31:2/0 = 0
+32:2/0 = 0
+33:2/0 = 0
+34:2/0 = 0
+35:2/0 = 0
+36:2/0 = 0
+37:2/0 = 0
+38:2/0 = 0
+39:2/0 = 0
+40:2/0 = 0
+41:2/0 = 0
+42:2/0 = 0
+43:2/0 = 0
+44:2/0 = 0
+45:2/0 = 0
+46:2/0 = 0
+47:2/0 = 0
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+21:3/0 = 0
+22:3/0 = 0
+23:3/0 = 0
+24:3/0 = 0
+25:3/0 = 0
+26:3/0 = 0
+28:3/0 = 0
+30:3/0 = 0
+31:3/0 = 0
+32:3/0 = 0
+33:3/0 = 0
+34:3/0 = 0
+35:3/0 = 0
+36:3/0 = 0
+37:3/0 = 0
+38:3/0 = 0
+39:3/0 = 0
+40:3/0 = 0
+41:3/0 = 0
+42:3/0 = 0
+43:3/0 = 0
+44:3/0 = 0
+45:3/0 = 0
+46:3/0 = 0
+47:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+22:4/0 = 0
+23:4/0 = 0
+24:4/0 = 0
+25:4/0 = 0
+26:4/0 = 0
+27:4/0 = 0
+28:4/0 = 0
+29:4/0 = 0
+30:4/0 = 0
+31:4/0 = 0
+32:4/0 = 0
+33:4/0 = 0
+34:4/0 = 0
+35:4/0 = 0
+36:4/0 = 0
+37:4/0 = 0
+38:4/0 = 0
+39:4/0 = 0
+40:4/0 = 0
+41:4/0 = 0
+42:4/0 = 0
+43:4/0 = 0
+44:4/0 = 0
+45:4/0 = 0
+46:4/0 = 0
+47:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+22:5/0 = 0
+23:5/0 = 0
+24:5/0 = 0
+25:5/0 = 0
+26:5/0 = 0
+27:5/0 = 0
+28:5/0 = 0
+29:5/0 = 0
+30:5/0 = 0
+31:5/0 = 0
+32:5/0 = 0
+33:5/0 = 0
+34:5/0 = 0
+35:5/0 = 0
+36:5/0 = 0
+37:5/0 = 0
+38:5/0 = 0
+39:5/0 = 0
+40:5/0 = 0
+41:5/0 = 0
+42:5/0 = 0
+43:5/0 = 0
+44:5/0 = 0
+45:5/0 = 0
+46:5/0 = 0
+47:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+21:6/0 = 0
+22:6/0 = 0
+23:6/0 = 0
+24:6/0 = 0
+25:6/0 = 0
+26:6/0 = 0
+27:6/0 = 0
+28:6/0 = 0
+29:6/0 = 0
+30:6/0 = 0
+31:6/0 = 0
+32:6/0 = 0
+33:6/0 = 0
+34:6/0 = 0
+35:6/0 = 0
+36:6/0 = 0
+37:6/0 = 0
+38:6/0 = 0
+39:6/0 = 0
+40:6/0 = 0
+41:6/0 = 0
+42:6/0 = 0
+43:6/0 = 0
+44:6/0 = 0
+45:6/0 = 0
+46:6/0 = 0
+47:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+20:7/0 = 0
+21:7/0 = 0
+22:7/0 = 0
+23:7/0 = 0
+24:7/0 = 0
+25:7/0 = 0
+26:7/0 = 0
+27:7/0 = 0
+28:7/0 = 0
+29:7/0 = 0
+30:7/0 = 0
+31:7/0 = 0
+32:7/0 = 0
+33:7/0 = 0
+34:7/0 = 0
+35:7/0 = 0
+36:7/0 = 0
+37:7/0 = 0
+38:7/0 = 0
+39:7/0 = 0
+40:7/0 = 0
+41:7/0 = 0
+42:7/0 = 0
+43:7/0 = 0
+44:7/0 = 0
+45:7/0 = 0
+46:7/0 = 0
+47:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+21:8/0 = 0
+22:8/0 = 0
+23:8/0 = 0
+24:8/0 = 0
+25:8/0 = 0
+26:8/0 = 0
+27:8/0 = 0
+28:8/0 = 0
+29:8/0 = 0
+30:8/0 = 0
+31:8/0 = 0
+32:8/0 = 0
+33:8/0 = 0
+34:8/0 = 0
+35:8/0 = 0
+36:8/0 = 0
+37:8/0 = 0
+38:8/0 = 0
+39:8/0 = 0
+40:8/0 = 0
+41:8/0 = 0
+42:8/0 = 0
+43:8/0 = 0
+44:8/0 = 0
+45:8/0 = 0
+46:8/0 = 0
+47:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+21:9/0 = 0
+22:9/0 = 0
+23:9/0 = 0
+24:9/0 = 0
+25:9/0 = 0
+26:9/0 = 0
+27:9/0 = 0
+28:9/0 = 0
+29:9/0 = 0
+30:9/0 = 0
+31:9/0 = 0
+32:9/0 = 0
+39:9/0 = 0
+40:9/0 = 0
+41:9/0 = 0
+42:9/0 = 0
+43:9/0 = 0
+44:9/0 = 0
+45:9/0 = 0
+46:9/0 = 0
+47:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+16:10/0 = 0
+17:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+21:10/0 = 0
+22:10/0 = 0
+23:10/0 = 0
+24:10/0 = 0
+25:10/0 = 0
+26:10/0 = 0
+27:10/0 = 0
+28:10/0 = 0
+29:10/0 = 0
+30:10/0 = 0
+31:10/0 = 0
+32:10/0 = 0
+39:10/0 = 0
+40:10/0 = 0
+41:10/0 = 0
+42:10/0 = 0
+43:10/0 = 0
+44:10/0 = 0
+45:10/0 = 0
+46:10/0 = 0
+47:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+16:11/0 = 0
+17:11/0 = 0
+18:11/0 = 0
+19:11/0 = 0
+20:11/0 = 0
+21:11/0 = 0
+22:11/0 = 0
+23:11/0 = 0
+24:11/0 = 0
+25:11/0 = 0
+26:11/0 = 0
+27:11/0 = 0
+28:11/0 = 0
+29:11/0 = 0
+30:11/0 = 0
+31:11/0 = 0
+32:11/0 = 0
+33:11/0 = 0
+38:11/0 = 0
+39:11/0 = 0
+40:11/0 = 0
+41:11/0 = 0
+42:11/0 = 0
+43:11/0 = 0
+44:11/0 = 0
+45:11/0 = 0
+46:11/0 = 0
+47:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+16:12/0 = 0
+17:12/0 = 0
+18:12/0 = 0
+19:12/0 = 0
+20:12/0 = 0
+21:12/0 = 0
+22:12/0 = 0
+23:12/0 = 0
+24:12/0 = 0
+25:12/0 = 0
+26:12/0 = 0
+27:12/0 = 0
+28:12/0 = 0
+29:12/0 = 0
+30:12/0 = 0
+31:12/0 = 0
+32:12/0 = 0
+33:12/0 = 0
+34:12/0 = 0
+35:12/0 = 0
+36:12/0 = 0
+37:12/0 = 0
+38:12/0 = 0
+39:12/0 = 0
+40:12/0 = 0
+41:12/0 = 0
+42:12/0 = 0
+43:12/0 = 0
+44:12/0 = 0
+45:12/0 = 0
+46:12/0 = 0
+47:12/0 = 0
+0:13/0 = 0
+0:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+4:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+12:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+16:13/0 = 0
+17:13/0 = 0
+18:13/0 = 0
+19:13/0 = 0
+20:13/0 = 0
+21:13/0 = 0
+22:13/0 = 0
+23:13/0 = 0
+24:13/0 = 0
+25:13/0 = 0
+26:13/0 = 0
+27:13/0 = 0
+28:13/0 = 0
+29:13/0 = 0
+30:13/0 = 0
+31:13/0 = 0
+32:13/0 = 0
+33:13/0 = 0
+34:13/0 = 0
+35:13/0 = 0
+36:13/0 = 0
+37:13/0 = 0
+38:13/0 = 0
+39:13/0 = 0
+40:13/0 = 0
+41:13/0 = 0
+42:13/0 = 0
+43:13/0 = 0
+44:13/0 = 0
+45:13/0 = 0
+46:13/0 = 0
+47:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+12:14/0 = 0
+14:14/0 = 0
+15:14/0 = 0
+16:14/0 = 0
+17:14/0 = 0
+18:14/0 = 0
+19:14/0 = 0
+20:14/0 = 0
+21:14/0 = 0
+22:14/0 = 0
+23:14/0 = 0
+24:14/0 = 0
+25:14/0 = 0
+26:14/0 = 0
+27:14/0 = 0
+28:14/0 = 0
+29:14/0 = 0
+30:14/0 = 0
+31:14/0 = 0
+32:14/0 = 0
+33:14/0 = 0
+34:14/0 = 0
+35:14/0 = 0
+36:14/0 = 0
+37:14/0 = 0
+38:14/0 = 0
+39:14/0 = 0
+40:14/0 = 0
+41:14/0 = 0
+42:14/0 = 0
+43:14/0 = 0
+44:14/0 = 0
+45:14/0 = 0
+46:14/0 = 0
+47:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+1:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:15/0 = 0
+2:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:15/0 = 0
+3:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:15/0 = 0
+5:15/0 = 0
+6:15/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+11:15/0 = 0
+12:15/0 = 0
+13:15/0 = 0
+14:15/0 = 0
+15:15/0 = 0
+16:15/0 = 0
+17:15/0 = 0
+18:15/0 = 0
+19:15/0 = 0
+20:15/0 = 0
+21:15/0 = 0
+22:15/0 = 0
+23:15/0 = 0
+24:15/0 = 0
+25:15/0 = 0
+26:15/0 = 0
+27:15/0 = 0
+28:15/0 = 0
+29:15/0 = 0
+30:15/0 = 0
+31:15/0 = 0
+32:15/0 = 0
+33:15/0 = 0
+34:15/0 = 0
+35:15/0 = 0
+36:15/0 = 0
+37:15/0 = 0
+38:15/0 = 0
+39:15/0 = 0
+40:15/0 = 0
+41:15/0 = 0
+42:15/0 = 0
+43:15/0 = 0
+44:15/0 = 0
+45:15/0 = 0
+46:15/0 = 0
+47:15/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_dy3kw"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 17
+physics_layer_0/collision_mask = 16
+sources/2 = SubResource("TileSetAtlasSource_p5rd3")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7xxsv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kb3y"]
+atlas = ExtResource("7_di4fi")
+region = Rect2(96, 192, 32, 32)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n7348"]
+radius = 31.0
+height = 90.0
+
+[node name="ChooseBackground" type="Node2D"]
+script = ExtResource("1_yi7os")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+z_index = -1
+position = Vector2(27, -2)
+tile_map_data = PackedByteArray("AAD//wAAFwAAAAAAAAAAAAAAFwAAAAAAAAABAAAAFwAAAAAAAAACAAAAFwAAAAAAAAADAAAAFwAAAAAAAAACAP//FwAAAAAAAAABAP//FwAAAAAAAAAAAP//FwAAAAAAAAD/////FwAAAAAAAAD+////FwAAAAAAAAD+//7/FwAAAAAAAAD///7/FwAAAAAAAAAAAP7/FwAAAAAAAAABAP7/FwAAAAAAAAACAP7/FwAAAAAAAAADAAEAFwAAAAAAAAACAAEAFwAAAAAAAAABAAEAFwAAAAAAAAAAAAEAFwAAAAAAAAD//wEAFwAAAAAAAAD+/wEAFwAAAAAAAAD9/wEAFwAAAAAAAAD8/wEAFwAAAAAAAAD9/wAAFwAAAAAAAAD9////FwAAAAAAAAD+/wAAFwAAAAAAAAD8////FwAAAAAAAAD9//7/FwAAAAAAAAADAP7/FwAAAAAAAAADAP//FwAAAAAAAAAEAAAAFwAAAAAAAAAEAAEAFwAAAAAAAAAFAAAAFwAAAAAAAAAEAP//FwAAAAAAAAAFAP7/FwAAAAAAAAAEAP7/FwAAAAAAAAADAP3/FwAAAAAAAAAEAP3/FwAAAAAAAAAFAP3/FwAAAAAAAAAGAP7/FwAAAAAAAAAFAP//FwAAAAAAAAAGAAAAFwAAAAAAAAAFAAEAFwAAAAAAAAAHAAAAFwAAAAAAAAAHAP//FwAAAAAAAAAHAP7/FwAAAAAAAAAGAP//FwAAAAAAAAAGAAEAFwAAAAAAAAACAP3/FwAAAAAAAAABAP3/FwAAAAAAAAAAAP3/FwAAAAAAAAD///3/FwAAAAAAAAD+//3/FwAAAAAAAAD9//3/FwAAAAAAAAD8//3/FwAAAAAAAAD8//z/FwAAAAAAAAD9//z/FwAAAAAAAAD+//z/FwAAAAAAAAD///z/FwAAAAAAAAAAAPz/FwAAAAAAAAABAPz/FwAAAAAAAAACAPz/FwAAAAAAAAADAPz/FwAAAAAAAAAEAPz/FwAAAAAAAAAFAPz/FwAAAAAAAAAGAPz/FwAAAAAAAAAHAPz/FwAAAAAAAAAIAPz/FwAAAAAAAAD7//z/FwAAAAAAAAAHAP3/FwAAAAAAAAAIAP3/FwAAAAAAAAAGAP3/FwAAAAAAAAD7//3/FwAAAAAAAAD6//3/FwAAAAAAAAD8//7/FwAAAAAAAAD7//7/FwAAAAAAAAAIAP7/FwAAAAAAAAAIAP//FwAAAAAAAAAJAP7/FwAAAAAAAAAIAAAAFwAAAAAAAAAHAAEAFwAAAAAAAAAIAAEAFwAAAAAAAAAJAAAAFwAAAAAAAAD8/wAAFwAAAAAAAAD7/wEAFwAAAAAAAAD7/wAAFwAAAAAAAAD7////FwAAAAAAAAD6////FwAAAAAAAAD6//7/FwAAAAAAAAA=")
+tile_set = ExtResource("2_5riq8")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="."]
+z_index = -1
+position = Vector2(-101, -32)
+tile_map_data = PackedByteArray("AAD8/wIAAgAAAAAAAAD9/wIAAgAAAAAAAAD+/wIAAgAAAAAAAAD//wIAAgAAAAAAAAAAAAIAAgAAAAAAAAABAAIAAgAAAAAAAAACAAIAAgAAAAAAAAADAAIAAgAAAAAAAAAEAAIAAgAAAAAAAAAFAAIAAgAAAAAAAAAGAAIAAgAAAAAAAAAHAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAJAAIAAgAAAAAAAAD7/wEAAgAAAAAAAAD7/wAAAgAAAAAAAAD7//7/AgAAAAAAAAAJAAEAAgAAAAAAAAAJAP//AgAAAAAAAAD6////AgAAAAAAAAA=")
+tile_set = ExtResource("3_8ug8l")
+
+[node name="Floor_Walls" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD3////AgAGAAkAAAD3/wAAAgAGAAkAAAD3//7/AgAGAAkAAAD4//7/AgAGAAkAAAD4////AgAGAAkAAAD4/wAAAgAGAAkAAAD5/wAAAgAGAAkAAAD5////AgAGAAkAAAD5//7/AgAGAAkAAAD6//7/AgAGAAkAAAD6////AgAGAAkAAAD6/wAAAgAGAAkAAAD7/wAAAgAGAAkAAAD7////AgAGAAkAAAD7//7/AgAGAAkAAAD8//7/AgAGAAkAAAD8////AgAGAAkAAAD8/wAAAgAGAAkAAAD9/wAAAgAGAAkAAAD9////AgAGAAkAAAD9//7/AgAGAAkAAAD+//7/AgAGAAkAAAD+////AgAGAAkAAAD+/wAAAgAGAAkAAAD//wAAAgAGAAkAAAD/////AgAGAAkAAAD///7/AgAGAAkAAAAAAP7/AgAGAAkAAAAAAP//AgAGAAkAAAAAAAAAAgAGAAkAAAABAAAAAgAGAAkAAAABAP//AgAGAAkAAAABAP7/AgAGAAkAAAACAP7/AgAGAAkAAAACAP//AgAGAAkAAAACAAAAAgAGAAkAAAADAAAAAgAGAAkAAAADAP//AgAGAAkAAAADAP7/AgAGAAkAAAAEAP7/AgAGAAkAAAAEAP//AgAGAAkAAAAEAAAAAgAGAAkAAAAFAAAAAgAGAAkAAAAFAP//AgAGAAkAAAAFAP7/AgAGAAkAAAD2//7/AgAAAA0AAAD2////AgAAAA0AAAD2/wAAAgAAAA0AAAD3//3/AgAGAAkAAAD4//3/AgAGAAkAAAD5//3/AgAGAAkAAAD6//3/AgAGAAkAAAD7//3/AgAGAAkAAAD8//3/AgAGAAkAAAD9//3/AgAGAAkAAAD+//3/AgAGAAkAAAD///3/AgAGAAkAAAAAAP3/AgAGAAkAAAABAP3/AgAGAAkAAAACAP3/AgAGAAkAAAADAP3/AgAGAAkAAAAEAP3/AgAGAAkAAAAFAP3/AgAGAAkAAAD3/wEAAgAGAAkAAAD4/wEAAgAGAAkAAAD5/wEAAgAGAAkAAAD6/wEAAgAGAAkAAAD7/wEAAgAGAAkAAAD8/wEAAgAGAAkAAAD9/wEAAgAGAAkAAAD+/wEAAgAGAAkAAAD//wEAAgAGAAkAAAAAAAEAAgAGAAkAAAABAAEAAgAGAAkAAAACAAEAAgAGAAkAAAADAAEAAgAGAAkAAAAEAAEAAgAGAAkAAAAFAAEAAgAGAAkAAAD3//z/AgAGAAkAAAD4//z/AgAGAAkAAAD5//z/AgAGAAkAAAD6//z/AgAGAAkAAAD7//z/AgAGAAkAAAD8//z/AgAGAAkAAAD9//z/AgAGAAkAAAD+//z/AgAGAAkAAAD///z/AgAGAAkAAAAAAPz/AgAGAAkAAAABAPz/AgAGAAkAAAACAPz/AgAGAAkAAAADAPz/AgAGAAkAAAAEAPz/AgAGAAkAAAAFAPz/AgAGAAkAAAD3/wIAAgAGAAkAAAD4/wIAAgAGAAkAAAD5/wIAAgAGAAkAAAD6/wIAAgAGAAkAAAD7/wIAAgAGAAkAAAD8/wIAAgAGAAkAAAD9/wIAAgAGAAkAAAD+/wIAAgAGAAkAAAD//wIAAgAGAAkAAAAAAAIAAgAGAAkAAAABAAIAAgAGAAkAAAACAAIAAgAGAAkAAAADAAIAAgAGAAkAAAAEAAIAAgAGAAkAAAAFAAIAAgAGAAkAAAD2/wEAAgAAAA0AAAD2/wIAAgAAAA0AAAD2//z/AgAAAA0AAAD2//3/AgAAAA0AAAAGAPz/AgAEAA0AAAAGAP3/AgAEAA0AAAAGAP7/AgAEAA0AAAAGAP//AgAEAA0AAAAGAAAAAgAEAA0AAAAGAAEAAgAEAA0AAAAGAAIAAgAEAA0AAAD3/wMAAgACAA8AAAD4/wMAAgACAA8AAAD5/wMAAgACAA8AAAD6/wMAAgACAA8AAAD7/wMAAgACAA8AAAD8/wMAAgACAA8AAAD9/wMAAgACAA8AAAD+/wMAAgACAA8AAAD//wMAAgACAA8AAAAAAAMAAgACAA8AAAABAAMAAgACAA8AAAACAAMAAgACAA8AAAADAAMAAgACAA8AAAAEAAMAAgACAA8AAAAFAAMAAgACAA8AAAAGAAMAAgADAA8AAAD2/wMAAgABAA8AAAD3//r/AgAAAAIAAAD3//v/AgAAAAMAAAD4//r/AgAAAAIAAAD4//v/AgAAAAMAAAD5//r/AgAAAAIAAAD5//v/AgAAAAMAAAD6//r/AgAAAAIAAAD6//v/AgAAAAMAAAD7//r/AgAAAAIAAAD7//v/AgAAAAMAAAD8//r/AgAAAAIAAAD8//v/AgAAAAMAAAD9//r/AgAAAAIAAAD9//v/AgAAAAMAAAD+//r/AgAAAAIAAAD+//v/AgAAAAMAAAD///r/AgAAAAIAAAD///v/AgAAAAMAAAAAAPr/AgAAAAIAAAAAAPv/AgAAAAMAAAABAPr/AgAAAAIAAAABAPv/AgAAAAMAAAACAPr/AgAAAAIAAAACAPv/AgAAAAMAAAADAPr/AgAAAAIAAAADAPv/AgAAAAMAAAAEAPr/AgAAAAIAAAAEAPv/AgAAAAMAAAAFAPr/AgAAAAIAAAAFAPv/AgAAAAMAAAD2//v/AgAAAA0AAAD2//r/AgAAAA0AAAAGAPv/AgAEAA0AAAAGAPr/AgAEAA0AAAA=")
+tile_set = SubResource("TileSet_dy3kw")
+
+[node name="CCPortal" parent="." instance=ExtResource("13_5cdot")]
+position = Vector2(-264, -17)
+script = null
+
+[node name="CCBackground" type="Area2D" parent="CCPortal"]
+position = Vector2(12, 2)
+monitoring = false
+monitorable = false
+script = ExtResource("14_fiujf")
+level = "uid://bs8ijq7y4cqer"
+target_transition_area = "CCRace"
+size = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CCPortal/CCBackground"]
+shape = SubResource("CapsuleShape2D_7xxsv")
+
+[node name="Archer" parent="." instance=ExtResource("5_ihrii")]
+position = Vector2(-207, -80)
+npc_resource = ExtResource("6_rpryw")
+char_name = "Archer"
+
+[node name="Sprite2D" type="Sprite2D" parent="Archer"]
+show_behind_parent = true
+position = Vector2(-6, -22)
+rotation = 2.61773
+texture = SubResource("AtlasTexture_1kb3y")
+
+[node name="DialogInteraction" parent="Archer" instance=ExtResource("8_360ig")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Archer/DialogInteraction"]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_n7348")
+debug_color = Color(0.533167, 0.569459, 0.054255, 0.42)
+
+[node name="DialogText" type="Node" parent="Archer/DialogInteraction"]
+script = ExtResource("9_1khvj")
+text = "Hail and well met, new traveler."
+npc_info = ExtResource("6_rpryw")
+metadata/_custom_type_script = "uid://dp3vqxkgw3lym"
+
+[node name="DialogText2" type="Node" parent="Archer/DialogInteraction"]
+script = ExtResource("9_1khvj")
+text = "Embrace the way of the archer, and let your arrows fly true! Will you accept this path?
+
+"
+npc_info = ExtResource("6_rpryw")
+metadata/_custom_type_script = "uid://dp3vqxkgw3lym"
+
+[node name="DialogChoice" type="Node" parent="Archer/DialogInteraction"]
+script = ExtResource("10_x6kcp")
+npc_info = ExtResource("6_rpryw")
+metadata/_custom_type_script = "uid://2qan2ymtjuxx"
+
+[node name="DialogBranch" type="Node" parent="Archer/DialogInteraction/DialogChoice"]
+script = ExtResource("11_5yp71")
+text = "Yes..."
+npc_info = ExtResource("6_rpryw")
+metadata/_custom_type_script = "uid://l0dpvjn22dtg"
+
+[node name="BackgroundSkills" parent="Archer/DialogInteraction/DialogChoice/DialogBranch" instance=ExtResource("12_0is4l")]
+
+[node name="DialogText" type="Node" parent="Archer/DialogInteraction/DialogChoice/DialogBranch"]
+script = ExtResource("9_1khvj")
+text = "Great! Let me teach you the ways of the archer."
+npc_info = ExtResource("6_rpryw")
+metadata/_custom_type_script = "uid://dp3vqxkgw3lym"
+
+[node name="DialogBranch2" type="Node" parent="Archer/DialogInteraction/DialogChoice"]
+script = ExtResource("11_5yp71")
+text = "No..."
+npc_info = ExtResource("6_rpryw")
+metadata/_custom_type_script = "uid://l0dpvjn22dtg"
+
+[node name="DialogText" type="Node" parent="Archer/DialogInteraction/DialogChoice/DialogBranch2"]
+script = ExtResource("9_1khvj")
+text = "If that is your choice. Find your calling with somebody else."
+npc_info = ExtResource("6_rpryw")
+metadata/_custom_type_script = "uid://dp3vqxkgw3lym"
+
+[node name="NPC" parent="." instance=ExtResource("5_ihrii")]
+position = Vector2(-105, -80)
+npc_resource = ExtResource("15_5riq8")
+
+[node name="DialogInteraction" parent="NPC" instance=ExtResource("8_360ig")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/DialogInteraction"]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_n7348")
+debug_color = Color(0.533167, 0.569459, 0.054255, 0.42)
+
+[node name="DialogText" type="Node" parent="NPC/DialogInteraction"]
+script = ExtResource("9_1khvj")
+text = "You have the look of a inexperienced young one about you."
+npc_info = ExtResource("6_rpryw")
+metadata/_custom_type_script = "uid://dp3vqxkgw3lym"
+
+[node name="DialogText2" type="Node" parent="NPC/DialogInteraction"]
+script = ExtResource("9_1khvj")
+text = "Embrace the way of the archer, and let your arrows fly true! Will you accept this path?
+
+"
+npc_info = ExtResource("6_rpryw")
+metadata/_custom_type_script = "uid://dp3vqxkgw3lym"
+
+[node name="DialogChoice" type="Node" parent="NPC/DialogInteraction"]
+script = ExtResource("10_x6kcp")
+npc_info = ExtResource("6_rpryw")
+metadata/_custom_type_script = "uid://2qan2ymtjuxx"
+
+[node name="DialogBranch" type="Node" parent="NPC/DialogInteraction/DialogChoice"]
+script = ExtResource("11_5yp71")
+text = "Yes..."
+npc_info = ExtResource("6_rpryw")
+metadata/_custom_type_script = "uid://l0dpvjn22dtg"
+
+[node name="BackgroundSkills" parent="NPC/DialogInteraction/DialogChoice/DialogBranch" instance=ExtResource("12_0is4l")]
+
+[node name="DialogText" type="Node" parent="NPC/DialogInteraction/DialogChoice/DialogBranch"]
+script = ExtResource("9_1khvj")
+text = "Great! Let me teach you the ways of the archer."
+npc_info = ExtResource("6_rpryw")
+metadata/_custom_type_script = "uid://dp3vqxkgw3lym"
+
+[node name="DialogBranch2" type="Node" parent="NPC/DialogInteraction/DialogChoice"]
+script = ExtResource("11_5yp71")
+text = "No..."
+npc_info = ExtResource("6_rpryw")
+metadata/_custom_type_script = "uid://l0dpvjn22dtg"
+
+[node name="DialogText" type="Node" parent="NPC/DialogInteraction/DialogChoice/DialogBranch2"]
+script = ExtResource("9_1khvj")
+text = "If that is your choice. Find your calling with somebody else."
+npc_info = ExtResource("6_rpryw")
+metadata/_custom_type_script = "uid://dp3vqxkgw3lym"

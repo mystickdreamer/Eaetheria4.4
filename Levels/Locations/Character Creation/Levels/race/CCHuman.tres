@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=11 format=3 uid="uid://rftr0hfpxgux"]
+
+[ext_resource type="Script" uid="uid://b627pocwa4b4c" path="res://Entities/Monsters/NPCs/scripts/npc_resource.gd" id="1_5ax1k"]
+[ext_resource type="Texture2D" uid="uid://cp3p5oxva3o5h" path="res://Assets/Characters/BodyParts/Bodies/Body 1/body_1_atlas.png" id="1_nym7b"]
+[ext_resource type="Texture2D" uid="uid://k5rttdgbe1fn" path="res://Assets/Characters/BodyParts/Eyes/Eyes4/eye_4_atlas.png" id="2_j6wak"]
+[ext_resource type="Texture2D" uid="uid://cqkytniha40eu" path="res://Assets/Characters/BodyParts/Hairs/Hair 1/hair_1_atlas.png" id="3_pgvkc"]
+[ext_resource type="Texture2D" uid="uid://173qdjb0nvgf" path="res://Assets/Characters/BodyParts/Heads/Head 1/head_1_atlas.png" id="4_k2eye"]
+[ext_resource type="Texture2D" uid="uid://kkw7t2i3n82k" path="res://Assets/Characters/BodyParts/Left/Feet/left_foot_1_atlas.png" id="5_bff6u"]
+[ext_resource type="Texture2D" uid="uid://dnvgkobqyj8b0" path="res://Assets/Characters/BodyParts/Left/Hands/left_hand_1_atlas.png" id="6_yjwd0"]
+[ext_resource type="Texture2D" uid="uid://cndsfie8tnin4" path="res://Assets/Characters/BodyParts/Mouth/Mouth 1/mouth_1_atlas.png" id="7_owais"]
+[ext_resource type="Texture2D" uid="uid://b5h8bcgesgg11" path="res://Assets/Characters/BodyParts/Right/Feet/right_foot_1_atlas.png" id="8_usfwm"]
+[ext_resource type="Texture2D" uid="uid://bg17hdku6b6p1" path="res://Assets/Characters/BodyParts/Right/Hands/right_hand_1_atlas.png" id="9_hfgru"]
+
+[resource]
+script = ExtResource("1_5ax1k")
+npc_name = "Roger"
+npc_class = "human"
+body_sprite = ExtResource("1_nym7b")
+mouth_sprite = ExtResource("7_owais")
+head_sprite = ExtResource("4_k2eye")
+eyes_sprite = ExtResource("2_j6wak")
+hair_sprite = ExtResource("3_pgvkc")
+left_foot_sprite = ExtResource("5_bff6u")
+right_foot_sprite = ExtResource("8_usfwm")
+left_hand_sprite = ExtResource("6_yjwd0")
+right_hand_sprite = ExtResource("9_hfgru")
+body_modulate = Color(1, 1, 1, 1)
+mouth_modulate = Color(1, 1, 1, 1)
+head_modulate = Color(1, 1, 1, 1)
+eyes_modulate = Color(1, 1, 1, 1)
+hair_modulate = Color(1, 1, 1, 1)
+foot_modulate = Color(1, 1, 1, 1)
+hand_modulate = Color(1, 1, 1, 1)
+wing_modulate = Color(1, 1, 1, 1)
+teeth_modulate = Color(1, 1, 1, 1)
+ears_modulate = Color(1, 1, 1, 1)
+tail_modulate = Color(1, 1, 1, 1)
+dialog_audio_pitch = 1.0
+metadata/_custom_type_script = "uid://b627pocwa4b4c"

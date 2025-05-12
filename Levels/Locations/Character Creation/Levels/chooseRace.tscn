@@ -1,10 +1,11 @@
-[gd_scene load_steps=27 format=4 uid="uid://bs8ijq7y4cqer"]
+[gd_scene load_steps=28 format=4 uid="uid://bs8ijq7y4cqer"]
 
 [ext_resource type="TileSet" uid="uid://bjrqmdci0qd7b" path="res://Levels/OverWorld/Verdania/OverworldGroundTiles.tres" id="1_47bfi"]
 [ext_resource type="Script" uid="uid://6mywanism82s" path="res://Levels/Locations/Character Creation/Levels/level.gd" id="1_lbjph"]
 [ext_resource type="TileSet" uid="uid://ch6r13uqhwu4o" path="res://Levels/OverWorld/Verdania/OverworldGroundEdges.tres" id="2_xbj16"]
 [ext_resource type="Texture2D" uid="uid://c3ta6ssycrnd2" path="res://Assets/TileMapLayers/External/Island_24x24.png" id="3_h42d4"]
-[ext_resource type="PackedScene" uid="uid://dvbn2fngtkokj" path="res://Levels/Locations/Character Creation/CChuman.tscn" id="5_vmefa"]
+[ext_resource type="PackedScene" uid="uid://d2grvomkgoqy6" path="res://Entities/Monsters/NPCs/npc.tscn" id="5_vmefa"]
+[ext_resource type="Resource" uid="uid://rftr0hfpxgux" path="res://Levels/Locations/Character Creation/Levels/race/CCHuman.tres" id="6_la5gk"]
 [ext_resource type="PackedScene" uid="uid://bspndxcr483xk" path="res://Levels/Locations/Character Creation/CCelf.tscn" id="6_uvn48"]
 [ext_resource type="PackedScene" uid="uid://buvnohitml03d" path="res://Levels/Locations/Character Creation/CCdwarf.tscn" id="7_la5gk"]
 [ext_resource type="PackedScene" uid="uid://f0xly54ta18v" path="res://Levels/Locations/Character Creation/CChalfling.tscn" id="8_vfq2h"]
@@ -148,9 +149,9 @@ tile_set = SubResource("TileSet_0ui7a")
 
 [node name="Races" type="Node" parent="."]
 
-[node name="Human" parent="Races" groups=["Human", "Interactable"] instance=ExtResource("5_vmefa")]
-z_index = -1
-position = Vector2(-216, -137)
+[node name="Human" parent="Races" instance=ExtResource("5_vmefa")]
+position = Vector2(-219, -118)
+npc_resource = ExtResource("6_la5gk")
 
 [node name="Elf" parent="Races" groups=["Elf", "Interactable"] instance=ExtResource("6_uvn48")]
 position = Vector2(-168, -114)

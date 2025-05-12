@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b65h1q0e3bymd"]
+
+[ext_resource type="Script" uid="uid://nwbql4eomgf6" path="res://Levels/Locations/Character Creation/Levels/background/background_skills.gd" id="1_2aova"]
+
+[node name="BackgroundSkills" type="Node2D"]
+script = ExtResource("1_2aova")
+signal_name = "selected"
