@@ -1,6 +1,6 @@
 extends Node
 
-
+@export var sneak_color: Color = Color.WHITE
 
 
 func execute(s):
@@ -16,8 +16,10 @@ func execute(s):
 		print("SneakRoll: ", s.sneakRoll)
 #			if debug_label:
 #				debug_label.text += "\nglobalDiceRoller is not defined or does not have roll_dice method"
+		PlayerManager.player.modulate = sneak_color
 		s.sneaking = true
 	else:
+		PlayerManager.player.modulate = Color.WHITE
 		s.sneaking = false
 		s.sneakRoll = 0
 		print("Stopped Sneaking")
