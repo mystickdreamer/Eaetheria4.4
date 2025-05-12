@@ -1,0 +1,14 @@
+{
+	"frames":[
+		{"filename":"Archer eyes open mouth open","frame":{"x":0,"y":0,"w":1024,"h":1024},"rotated":"false","trimmed":"false","spriteSourceSize":{"x":0,"y":0,"w":1024,"h":1024},"sourceSize":{"w":1024,"h":1024}},
+		{"filename":"Archereyes open mouth closed","frame":{"x":0,"y":1025,"w":1024,"h":1024},"rotated":"false","trimmed":"false","spriteSourceSize":{"x":0,"y":0,"w":1024,"h":1024},"sourceSize":{"w":1024,"h":1024}}
+	],
+	"meta":{
+		"app":"https://github.com/BdR76/GimpSpriteAtlas/",
+		"version":"GIMP SpriteAtlas plug-in v0.3",
+		"author":"Bas de Reuver",
+		"image":"ArcherPortrait.png",
+		"size":{"w":1024,"h":2049},
+		"scale":1
+	}
+}
