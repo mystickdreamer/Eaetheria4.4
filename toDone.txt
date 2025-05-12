@@ -1,3 +1,5 @@
+Completed Dialog System - does not yet implement quests, or anything like that 
+
 add if_flying variable - Done
 add is_flying when selecting pixie race - Done
 

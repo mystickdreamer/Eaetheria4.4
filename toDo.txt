@@ -1,4 +1,6 @@
-working on NPCs and behaviors, along with new system for modular sprites
+Rework Monsters in the same way I have NPCs set up with a resource that way I can have 1 monster file that I can instance??? I think this will work 
+
+working on NPCs and behaviors, along with new system for modular sprites - almost done
 
 Fix taking damage for monsters and player
 
